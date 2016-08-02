@@ -24,14 +24,14 @@
 <script>
 function main() {
 cartodb.createVis('map', 'https://timothymartin76.cartodb.com/api/v2/viz/afab1640-5809-11e6-a93b-0e3a376473ab/viz.json', {
-shareable: true,
+shareable: false,
 https: true, 
 zoomControl: true,
 fullscreen : true,
 scrollwheel: true,
 title: true,
 description: false,
-search: false,
+search: true,
 //time_slider: false,
 tiles_loader: true,
 center_lat: 40.694526, 
@@ -41,6 +41,11 @@ zoom: 12
 .done(function(vis, layers) {
 // layer 0 is the base layer, layer 1 is cartodb layer
 // setInteraction is disabled by default
+// Set max zoom
+          vis.map.set({
+            minZoom: 12,
+            maxZoom: 18
+          });
 
 
 
