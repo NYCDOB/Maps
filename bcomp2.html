@@ -15,22 +15,22 @@
 		
 		
 </style>
-<link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.13/themes/css/cartodb.css" />
+<link rel="stylesheet" href="https://cartodb-libs.global.ssl.fastly.net/cartodb.js/v3/3.15/themes/css/cartodb.css"/>
 </head>
 <body>
 <div id="map"></div>
 <!-- include cartodb.js library -->
-<script src="http://libs.cartocdn.com/cartodb.js/v3/3.13/cartodb.js"></script>
+<script src="https://cartodb-libs.global.ssl.fastly.net/cartodb.js/v3/3.15/cartodb.js"></script>
 <script>
 function main() {
 cartodb.createVis('map', 'https://timothymartin76.carto.com/api/v2/viz/1f515a46-580e-11e6-b411-0e3ebc282e83/viz.json', {
-shareable: true,
+shareable: false,
 zoomControl: true,
 fullscreen : true,
 scrollwheel: true,
 title: true,
 description: false,
-search: false,
+search: true,
 //time_slider: false,
 tiles_loader: true,
 center_lat: 40.694526, 
