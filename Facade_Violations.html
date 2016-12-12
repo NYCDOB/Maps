@@ -35,14 +35,14 @@ search: false,
 tiles_loader: true,
 center_lat: 40.718757, 
 center_lon: -73.935368,
-zoom: 11
+zoom: 10
 })
 .done(function(vis, layers) {
 // layer 0 is the base layer, layer 1 is cartodb layer
 // setInteraction is disabled by default
 // Set max zoom
           vis.map.set({
-            minZoom: 10,
+            minZoom: 8,
             maxZoom: 18
           });
 layers[1].setInteraction(true);
