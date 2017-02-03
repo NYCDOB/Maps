@@ -79,26 +79,26 @@
 		}
 		
 		
-    function showLayer(layerToShow) {
+  function showLayer(layerToShow) {
         //turn off all layers
         layer.getSubLayers().forEach(function(i) {
             i.hide()
         });
         switch (layerToShow.id) {
             case "Unsafe":
-                layer.getSubLayer(0).show();
-                break;
-            case "Maintenance":
-                layer.getSubLayer(1).show();
+                layer.getSubLayer(4).show();
                 break;
             case "Construction":
-                layer.getSubLayer(2).show();
-                break;
-			case "Size":
                 layer.getSubLayer(3).show();
                 break;
+            case "Maintenance":
+                layer.getSubLayer(2).show();
+                break;
 			case "Age":
-                layer.getSubLayer(4).show();
+                layer.getSubLayer(1).show();
+                break;
+			case "Size":
+                layer.getSubLayer(0).show();
                 break;	
         }
         return true;
@@ -109,11 +109,11 @@
 <body onload="init()">
     <div id='map'></div>
     <div id='menu'>
+	<a href="#/Unsafe" id="Unsafe" class="button Unsafe" onclick="showLayer(this);">UNSAFE</a>
+	<a href="#/Construction" id="Construction" class="button Construction" onclick="showLayer(this);">CONSTR</a>
+    	<a href="#/Maintenance" id="Maintenance" class="button Maintenance" onclick="showLayer(this);">MAINT</a>
 	<a href="#/Age" id="Age" class="button Age" onclick="showLayer(this);">AGE</a>
 	<a href="#/Size" id="Size" class="button Size" onclick="showLayer(this);">SIZE</a>
-    <a href="#/Construction" id="Construction" class="button Construction" onclick="showLayer(this);">CONSTR</a>
-	<a href="#/Maintenance" id="Maintenance" class="button Maintenance" onclick="showLayer(this);">MAINT</a>
-	<a href="#/Unsafe" id="Unsafe" class="button Unsafe" onclick="showLayer(this);">UNSAFE</a>
     </div>
 	
 </body>
