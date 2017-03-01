@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Iron Triangle</title>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<style>
+		html, body, #map {
+		height: 100%;
+		padding: 0;
+		margin: 0;
+		}
+		
+
+		
+		
+</style>
+<link rel="stylesheet" href="https://cartodb-libs.global.ssl.fastly.net/cartodb.js/v3/3.15/themes/css/cartodb.css" />
+</head>
+<body>
+<div id="map"></div>
+<!-- include cartodb.js library -->
+<script src="https://cartodb-libs.global.ssl.fastly.net/cartodb.js/v3/3.15/cartodb.js"></script>
+
+
+<script>
+
+
+var map = new L.Map('map', { 
+      center: [40.756340,-73.843193], 
+      zoom: 17
+    });
+    L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
+    }).addTo(map);
+	
+	
+    var layerUrl = 'https://timothymartin76.carto.com/api/v2/viz/71dbb404-fea4-11e6-bc31-0e8c56e2ffdb/viz.json';
+    cartodb.createLayer(map, layerUrl)
+      .addTo(map)
+      .on('done', function(layer) {
+      }).on('error', function() {
+        //log the error
+      });
+</script>
+</body>
+</html>
