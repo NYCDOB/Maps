@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.1">
+<Document>
+<name>Map</name>
+<open>1</open>
+<description>View locations on the Google Map</description>
+<LookAt>
+<longitude>-74.00176644584657</longitude>
+<latitude>40.64260420059711</latitude>
+<altitude>0</altitude>
+<range>18750.0</range>
+<tilt>0</tilt>
+<heading>0</heading>
+</LookAt>
+<Style id="vzw_worker_green">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/vzw_worker_green.png</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="stop">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/stop.gif</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="VerizonLessThan5ArrowN">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/VerizonLessThan5ArrowN.png</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="VerizonBetween5and30ArrowSW">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/VerizonBetween5and30ArrowSW.png</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="VerizonBetween30and65ArrowSW">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/VerizonBetween30and65ArrowSW.png</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="landmark_general">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/landmark_general.gif</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="VerizonLessThan5NoDirection">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/VerizonLessThan5NoDirection.png</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="VerizonBetween5and30ArrowNW">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/VerizonBetween5and30ArrowNW.png</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="VerizonBetween30and65ArrowE">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/VerizonBetween30and65ArrowE.png</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="VerizonLessThan5ArrowNW">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/VerizonLessThan5ArrowNW.png</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="VerizonBetween5and30ArrowW">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/VerizonBetween5and30ArrowW.png</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="VerizonBetween5and30ArrowN">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/VerizonBetween5and30ArrowN.png</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="VerizonBetween5and30ArrowNE">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/VerizonBetween5and30ArrowNE.png</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="VerizonBetween5and30ArrowE">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/VerizonBetween5and30ArrowE.png</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="VerizonBetween30and65ArrowS">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/VerizonBetween30and65ArrowS.png</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="landmark_company">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/landmark_company.gif</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="VerizonBetween5and30ArrowS">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/VerizonBetween5and30ArrowS.png</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Folder>
+<name>Workers</name>
+<open>1</open>
+<description>View workers</description><Placemark>
+   <name><![CDATA[JOHN LOTITO 9178281940]]></name>
+   <description>
+       <![CDATA[
+Location: 280 Broadway<br/>64 reade street<br/>new york, NY 10007<br/>As of: 05/19/17<br/>01:04 PM EDT<br/>Status: Logged In<br/>]]>
+   </description>
+   <styleUrl>#vzw_worker_green</styleUrl>
+   <Point>
+       <coordinates>-74.00651846555554,40.71505763333334</coordinates>
+   </Point>
+</Placemark>
+</Folder>
+<Folder>
+<name>Landmarks</name>
+<open>1</open>
+<description>View landmarks</description><Placemark>
+   <name><![CDATA[280 Broadway]]></name>
+   <description>
+       <![CDATA[
+280 broadway<br/>new york, new york 10007]]>
+   </description>
+   <styleUrl>#landmark_general</styleUrl>
+   <Point>
+       <coordinates>-74.00582242018572,40.714292091735246</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[field]]></name>
+   <description>
+       <![CDATA[
+4304 12th ave<br/>brooklyn, NY 11219]]>
+   </description>
+   <styleUrl>#landmark_company</styleUrl>
+   <Point>
+       <coordinates>-73.9911304,40.6396366</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[inspection]]></name>
+   <description>
+       <![CDATA[
+200 varick st<br/>new york, NY 10007]]>
+   </description>
+   <styleUrl>#landmark_general</styleUrl>
+   <Point>
+       <coordinates>-74.0050692,40.728142</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[Municipal Bldg]]></name>
+   <description>
+       <![CDATA[
+1 centre st<br/>new york, ny 10007]]>
+   </description>
+   <styleUrl>#landmark_company</styleUrl>
+   <Point>
+       <coordinates>-74.003748,40.712931</coordinates>
+   </Point>
+</Placemark>
+</Folder>
+<Folder>
+<name>GPS points</name>
+<open>1</open>
+<description>View GPS points</description><Placemark>
+   <name><![CDATA[05/10/17 09:14 AM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: JOHN LOTITO 9178281940</b><br/>0 mph]]>
+   </description>
+   <styleUrl>#VerizonLessThan5NoDirection</styleUrl>
+   <Point>
+       <coordinates>-73.98971403,40.6800347</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 09:19 AM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: JOHN LOTITO 9178281940</b><br/>12 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween5and30ArrowSW</styleUrl>
+   <Point>
+       <coordinates>-73.98964577,40.67334285</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 09:24 AM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: JOHN LOTITO 9178281940</b><br/>49 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween30and65ArrowSW</styleUrl>
+   <Point>
+       <coordinates>-74.00059479,40.66129906</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 09:29 AM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: JOHN LOTITO 9178281940</b><br/>49 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween30and65ArrowS</styleUrl>
+   <Point>
+       <coordinates>-74.04148665,40.6219444</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 09:34 AM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: JOHN LOTITO 9178281940</b><br/>26 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween5and30ArrowE</styleUrl>
+   <Point>
+       <coordinates>-74.02401212,40.60482417</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 09:39 AM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: JOHN LOTITO 9178281940</b><br/>45 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween30and65ArrowE</styleUrl>
+   <Point>
+       <coordinates>-73.97977884,40.58277227</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 09:44 AM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: JOHN LOTITO 9178281940</b><br/>17 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween5and30ArrowN</styleUrl>
+   <Point>
+       <coordinates>-73.93169947,40.58818058</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 09:49 AM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: JOHN LOTITO 9178281940</b><br/>2 mph]]>
+   </description>
+   <styleUrl>#VerizonLessThan5ArrowN</styleUrl>
+   <Point>
+       <coordinates>-73.94053611,40.59370688</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 10:56 AM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: JOHN LOTITO 9178281940</b><br/>8 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween5and30ArrowW</styleUrl>
+   <Point>
+       <coordinates>-73.95372731,40.60618073</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 11:01 AM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: JOHN LOTITO 9178281940</b><br/>0 mph]]>
+   </description>
+   <styleUrl>#VerizonLessThan5NoDirection</styleUrl>
+   <Point>
+       <coordinates>-73.96687857,40.60527372</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 12:14 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: JOHN LOTITO 9178281940</b><br/>0 mph]]>
+   </description>
+   <styleUrl>#VerizonLessThan5NoDirection</styleUrl>
+   <Point>
+       <coordinates>-73.99814057,40.62559007</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 12:19 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: JOHN LOTITO 9178281940</b><br/>0 mph]]>
+   </description>
+   <styleUrl>#VerizonLessThan5NoDirection</styleUrl>
+   <Point>
+       <coordinates>-73.99839865,40.62560848</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 01:03 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: JOHN LOTITO 9178281940</b><br/>0 mph]]>
+   </description>
+   <styleUrl>#VerizonLessThan5NoDirection</styleUrl>
+   <Point>
+       <coordinates>-73.97155799,40.63719476</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 01:08 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: JOHN LOTITO 9178281940</b><br/>0 mph]]>
+   </description>
+   <styleUrl>#VerizonLessThan5NoDirection</styleUrl>
+   <Point>
+       <coordinates>-73.97152838,40.63720136</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 01:23 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: JOHN LOTITO 9178281940</b><br/>15 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween5and30ArrowSW</styleUrl>
+   <Point>
+       <coordinates>-73.98498623,40.63139019</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 01:28 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: JOHN LOTITO 9178281940</b><br/>9 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween5and30ArrowNW</styleUrl>
+   <Point>
+       <coordinates>-73.99365092,40.63416859</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 01:33 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: JOHN LOTITO 9178281940</b><br/>14 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween5and30ArrowNW</styleUrl>
+   <Point>
+       <coordinates>-73.99873422,40.63726182</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 01:38 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: JOHN LOTITO 9178281940</b><br/>2 mph]]>
+   </description>
+   <styleUrl>#VerizonLessThan5ArrowNW</styleUrl>
+   <Point>
+       <coordinates>-74.00506929,40.64006441</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 03:18 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: JOHN LOTITO 9178281940</b><br/>6 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween5and30ArrowNE</styleUrl>
+   <Point>
+       <coordinates>-73.99342593,40.64118846</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 03:23 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: JOHN LOTITO 9178281940</b><br/>8 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween5and30ArrowE</styleUrl>
+   <Point>
+       <coordinates>-73.98082112,40.64722091</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 04:23 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: JOHN LOTITO 9178281940</b><br/>0 mph]]>
+   </description>
+   <styleUrl>#VerizonLessThan5NoDirection</styleUrl>
+   <Point>
+       <coordinates>-73.97393371,40.64091605</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 04:28 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: JOHN LOTITO 9178281940</b><br/>21 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween5and30ArrowS</styleUrl>
+   <Point>
+       <coordinates>-73.97215197,40.63294092</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 04:33 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: JOHN LOTITO 9178281940</b><br/>7 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween5and30ArrowS</styleUrl>
+   <Point>
+       <coordinates>-73.96875481,40.61472934</coordinates>
+   </Point>
+</Placemark>
+</Folder>
+<Folder>
+<name>Map trip segments</name>
+<open>1</open>
+<description>View map trip segments</description><Placemark>
+   <name><![CDATA[Stop at 05/10/17 07:05 AM EDT]]></name>
+   <description>
+       <![CDATA[
+Worker: JOHN LOTITO 9178281940<br/>Location:  <font class='unknown_location'>Unknown</font><br/>58 court street<br/>brooklyn, NY 11201<br/><u>Stop Info</u><br/>Timecard status: Logged In<br/>Arr: 05/10/17 07:05 AM EDT<br/>Dep: 05/10/17 09:13 AM EDT<br/>Dur: 02:07 hrs.<br/><br/>]]>
+   </description>
+   <styleUrl>#stop</styleUrl>
+   <Point>
+       <coordinates>-73.99142555523808,40.692107018095236</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[Stop at 05/10/17 10:36 AM EDT]]></name>
+   <description>
+       <![CDATA[
+Worker: JOHN LOTITO 9178281940<br/>Location:  <font class='unknown_location'>Unknown</font><br/>2884 nostrand avenue<br/>brooklyn, NY 11229<br/><u>Stop Info</u><br/>Timecard status: Logged In<br/>Arr: 05/10/17 10:36 AM EDT<br/>Dep: 05/10/17 10:55 AM EDT<br/>Dur: 00:19 hrs.<br/><br/><u>Travel Info</u><br/>Dur: 01:24 hrs.<br/><br/>Dist: 14.4 miles<br/>]]>
+   </description>
+   <styleUrl>#stop</styleUrl>
+   <Point>
+       <coordinates>-73.9444761925,40.614003589999996</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[Stop at 05/10/17 11:06 AM EDT]]></name>
+   <description>
+       <![CDATA[
+Worker: JOHN LOTITO 9178281940<br/>Location:  <font class='unknown_location'>Unknown</font><br/>412 kings highway<br/>brooklyn, NY 11223<br/><u>Stop Info</u><br/>Timecard status: Logged In<br/>Arr: 05/10/17 11:06 AM EDT<br/>Dep: 05/10/17 12:10 PM EDT<br/>Dur: 01:03 hrs.<br/><br/><u>Travel Info</u><br/>Dur: 00:11 hrs.<br/><br/>Dist: 1.8 miles<br/>]]>
+   </description>
+   <styleUrl>#stop</styleUrl>
+   <Point>
+       <coordinates>-73.97466191666668,40.60417788</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[Stop at 05/10/17 01:13 PM EDT]]></name>
+   <description>
+       <![CDATA[
+Worker: JOHN LOTITO 9178281940<br/>Location:  <font class='unknown_location'>Unknown</font><br/>736 mcdonald avenue<br/>brooklyn, NY 11218<br/><u>Stop Info</u><br/>Timecard status: Logged In<br/>Arr: 05/10/17 01:13 PM EDT<br/>Dep: 05/10/17 01:22 PM EDT<br/>Dur: 00:09 hrs.<br/><br/><u>Travel Info</u><br/>Dur: 01:03 hrs.<br/><br/>Dist: 3.8 miles<br/>]]>
+   </description>
+   <styleUrl>#stop</styleUrl>
+   <Point>
+       <coordinates>-73.97848578,40.636229775000004</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[Stop at 05/10/17 01:43 PM EDT]]></name>
+   <description>
+       <![CDATA[
+Worker: JOHN LOTITO 9178281940<br/>Location:  <font class='unknown_location'>Unknown</font><br/>820 56th street<br/>brooklyn, NY 11220<br/><u>Stop Info</u><br/>Timecard status: Logged In<br/>Arr: 05/10/17 01:43 PM EDT<br/>Dep: 05/10/17 02:07 PM EDT<br/>Dur: 00:25 hrs.<br/><br/><u>Travel Info</u><br/>Dur: 00:21 hrs.<br/><br/>Dist: 1.8 miles<br/>]]>
+   </description>
+   <styleUrl>#stop</styleUrl>
+   <Point>
+       <coordinates>-74.00666985000001,40.6374011</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[Stop at 05/10/17 02:08 PM EDT]]></name>
+   <description>
+       <![CDATA[
+Worker: JOHN LOTITO 9178281940<br/>Location:  <font class='unknown_location'>Unknown</font><br/>951 59th street<br/>brooklyn, NY 11219<br/><u>Stop Info</u><br/>Timecard status: Logged In<br/>Arr: 05/10/17 02:08 PM EDT<br/>Dep: 05/10/17 03:16 PM EDT<br/>Dur: 01:09 hrs.<br/><br/><u>Travel Info</u><br/>Dur: 00:01 hrs.<br/><br/>Dist: 0.2 miles<br/>]]>
+   </description>
+   <styleUrl>#stop</styleUrl>
+   <Point>
+       <coordinates>-74.00541626357143,40.634042749285705</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[Stop at 05/10/17 03:28 PM EDT]]></name>
+   <description>
+       <![CDATA[
+Worker: JOHN LOTITO 9178281940<br/>Location:  <font class='unknown_location'>Unknown</font><br/>306 albemarle road<br/>brooklyn, NY 11218<br/><u>Stop Info</u><br/>Timecard status: Logged In<br/>Arr: 05/10/17 03:28 PM EDT<br/>Dep: 05/10/17 04:22 PM EDT<br/>Dur: 00:54 hrs.<br/><br/><u>Travel Info</u><br/>Dur: 00:11 hrs.<br/><br/>Dist: 1.9 miles<br/>]]>
+   </description>
+   <styleUrl>#stop</styleUrl>
+   <Point>
+       <coordinates>-73.97747237,40.64513752818181</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[Stop at 05/10/17 04:38 PM EDT]]></name>
+   <description>
+       <![CDATA[
+Worker: JOHN LOTITO 9178281940<br/>Location:  <font class='unknown_location'>Unknown</font><br/>1627 west 3rd street<br/>brooklyn, NY 11223<br/><u>Stop Info</u><br/>Timecard status: Logged In<br/>Arr: 05/10/17 04:38 PM EDT<br/>Dep: 05/10/17 04:58 PM EDT<br/>Dur: 00:20 hrs.<br/><br/><u>Travel Info</u><br/>Dur: 00:16 hrs.<br/><br/>Dist: 2.8 miles<br/>]]>
+   </description>
+   <styleUrl>#stop</styleUrl>
+   <Point>
+       <coordinates>-73.976544714,40.607671372000006</coordinates>
+   </Point>
+</Placemark>
+</Folder>
+</Document>
+</kml>

@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.1">
+<Document>
+<name>Map</name>
+<open>1</open>
+<description>View locations on the Google Map</description>
+<LookAt>
+<longitude>-73.96516652136232</longitude>
+<latitude>40.634739531962786</latitude>
+<altitude>0</altitude>
+<range>9350.0</range>
+<tilt>0</tilt>
+<heading>0</heading>
+</LookAt>
+<Style id="vzw_worker_green">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/vzw_worker_green.png</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="stop">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/stop.gif</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="VerizonBetween30and65ArrowSW">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/VerizonBetween30and65ArrowSW.png</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="landmark_general">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/landmark_general.gif</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="VerizonLessThan5NoDirection">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/VerizonLessThan5NoDirection.png</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="VerizonBetween5and30ArrowNW">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/VerizonBetween5and30ArrowNW.png</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="VerizonLessThan5ArrowSW">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/VerizonLessThan5ArrowSW.png</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="VerizonBetween5and30ArrowE">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/VerizonBetween5and30ArrowE.png</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="landmark_company">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/landmark_company.gif</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="VerizonBetween5and30ArrowSE">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/VerizonBetween5and30ArrowSE.png</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="VerizonBetween30and65ArrowSE">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/VerizonBetween30and65ArrowSE.png</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="VerizonBetween5and30ArrowS">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/VerizonBetween5and30ArrowS.png</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Folder>
+<name>Workers</name>
+<open>1</open>
+<description>View workers</description><Placemark>
+   <name><![CDATA[MYROSLAV HRABOVSKY 9292713710]]></name>
+   <description>
+       <![CDATA[
+Location:  <font class='unknown_location'>Unknown</font><br/>6523 18th avenue<br/>brooklyn, NY 11204<br/>As of: 05/19/17<br/>01:18 PM EDT<br/>Status: Logged In<br/>]]>
+   </description>
+   <styleUrl>#vzw_worker_green</styleUrl>
+   <Point>
+       <coordinates>-73.99051843,40.61871090666667</coordinates>
+   </Point>
+</Placemark>
+</Folder>
+<Folder>
+<name>Landmarks</name>
+<open>1</open>
+<description>View landmarks</description><Placemark>
+   <name><![CDATA[280 Broadway]]></name>
+   <description>
+       <![CDATA[
+280 broadway<br/>new york, new york 10007]]>
+   </description>
+   <styleUrl>#landmark_general</styleUrl>
+   <Point>
+       <coordinates>-74.00582242018572,40.714292091735246</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[field]]></name>
+   <description>
+       <![CDATA[
+4304 12th ave<br/>brooklyn, NY 11219]]>
+   </description>
+   <styleUrl>#landmark_company</styleUrl>
+   <Point>
+       <coordinates>-73.9911304,40.6396366</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[inspection]]></name>
+   <description>
+       <![CDATA[
+200 varick st<br/>new york, NY 10007]]>
+   </description>
+   <styleUrl>#landmark_general</styleUrl>
+   <Point>
+       <coordinates>-74.0050692,40.728142</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[Municipal Bldg]]></name>
+   <description>
+       <![CDATA[
+1 centre st<br/>new york, ny 10007]]>
+   </description>
+   <styleUrl>#landmark_company</styleUrl>
+   <Point>
+       <coordinates>-74.003748,40.712931</coordinates>
+   </Point>
+</Placemark>
+</Folder>
+<Folder>
+<name>GPS points</name>
+<open>1</open>
+<description>View GPS points</description><Placemark>
+   <name><![CDATA[05/10/17 08:38 AM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: MYROSLAV HRABOVSKY 9292713710</b><br/>21 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween5and30ArrowSE</styleUrl>
+   <Point>
+       <coordinates>-73.99967055,40.69154141</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 08:43 AM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: MYROSLAV HRABOVSKY 9292713710</b><br/>50 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween30and65ArrowSW</styleUrl>
+   <Point>
+       <coordinates>-74.0084536,40.65363273</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 09:28 AM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: MYROSLAV HRABOVSKY 9292713710</b><br/>0 mph]]>
+   </description>
+   <styleUrl>#VerizonLessThan5NoDirection</styleUrl>
+   <Point>
+       <coordinates>-74.03163374,40.60587436</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 09:33 AM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: MYROSLAV HRABOVSKY 9292713710</b><br/>40 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween30and65ArrowSE</styleUrl>
+   <Point>
+       <coordinates>-74.00504204,40.59755638</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 10:03 AM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: MYROSLAV HRABOVSKY 9292713710</b><br/>12 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween5and30ArrowE</styleUrl>
+   <Point>
+       <coordinates>-73.97966912,40.57943328</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 10:08 AM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: MYROSLAV HRABOVSKY 9292713710</b><br/>0 mph]]>
+   </description>
+   <styleUrl>#VerizonLessThan5NoDirection</styleUrl>
+   <Point>
+       <coordinates>-73.97350833,40.59496493</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 10:13 AM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: MYROSLAV HRABOVSKY 9292713710</b><br/>0 mph]]>
+   </description>
+   <styleUrl>#VerizonLessThan5NoDirection</styleUrl>
+   <Point>
+       <coordinates>-73.97254271,40.60644494</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 10:58 AM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: MYROSLAV HRABOVSKY 9292713710</b><br/>27 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween5and30ArrowS</styleUrl>
+   <Point>
+       <coordinates>-73.97450911,40.61115681</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 11:03 AM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: MYROSLAV HRABOVSKY 9292713710</b><br/>19 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween5and30ArrowS</styleUrl>
+   <Point>
+       <coordinates>-73.98442513,40.60260824</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 12:33 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: MYROSLAV HRABOVSKY 9292713710</b><br/>9 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween5and30ArrowNW</styleUrl>
+   <Point>
+       <coordinates>-73.98986367,40.60503667</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 12:38 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: MYROSLAV HRABOVSKY 9292713710</b><br/>0 mph]]>
+   </description>
+   <styleUrl>#VerizonLessThan5NoDirection</styleUrl>
+   <Point>
+       <coordinates>-73.99892563,40.59752531</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 02:33 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: MYROSLAV HRABOVSKY 9292713710</b><br/>0 mph]]>
+   </description>
+   <styleUrl>#VerizonLessThan5NoDirection</styleUrl>
+   <Point>
+       <coordinates>-74.00090485,40.61227644</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 02:53 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: MYROSLAV HRABOVSKY 9292713710</b><br/>21 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween5and30ArrowNW</styleUrl>
+   <Point>
+       <coordinates>-74.00463416,40.61861765</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 02:58 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: MYROSLAV HRABOVSKY 9292713710</b><br/>7 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween5and30ArrowNW</styleUrl>
+   <Point>
+       <coordinates>-74.0150573,40.6249968</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 03:03 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: MYROSLAV HRABOVSKY 9292713710</b><br/>9 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween5and30ArrowNW</styleUrl>
+   <Point>
+       <coordinates>-74.02253006,40.62949077</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 03:44 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: MYROSLAV HRABOVSKY 9292713710</b><br/>3 mph]]>
+   </description>
+   <styleUrl>#VerizonLessThan5ArrowSW</styleUrl>
+   <Point>
+       <coordinates>-74.01411642,40.64451384</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 03:49 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: MYROSLAV HRABOVSKY 9292713710</b><br/>0 mph]]>
+   </description>
+   <styleUrl>#VerizonLessThan5NoDirection</styleUrl>
+   <Point>
+       <coordinates>-74.02617749,40.62807545</coordinates>
+   </Point>
+</Placemark>
+</Folder>
+<Folder>
+<name>Map trip segments</name>
+<open>1</open>
+<description>View map trip segments</description><Placemark>
+   <name><![CDATA[Stop at 05/09/17 03:50 PM EDT]]></name>
+   <description>
+       <![CDATA[
+Worker: MYROSLAV HRABOVSKY 9292713710<br/>Location:  <font class='unknown_location'>Unknown</font><br/>8322 4th avenue<br/>brooklyn, NY 11209<br/><u>Stop Info</u><br/>Timecard status: Logged In<br/>Arr: 05/09/17 03:50 PM EDT<br/>Dep: 05/10/17 08:13 AM EDT<br/>Dur: 16:23 hrs.<br/><br/>]]>
+   </description>
+   <styleUrl>#stop</styleUrl>
+   <Point>
+       <coordinates>-74.02795622999999,40.62462729</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[Stop at 05/10/17 08:23 AM EDT]]></name>
+   <description>
+       <![CDATA[
+Worker: MYROSLAV HRABOVSKY 9292713710<br/>Location:  <font class='unknown_location'>Unknown</font><br/>209 joralemon street<br/>brooklyn, NY 11201<br/><u>Stop Info</u><br/>Timecard status: Logged In<br/>Arr: 05/10/17 08:23 AM EDT<br/>Dep: 05/10/17 08:37 AM EDT<br/>Dur: 00:14 hrs.<br/><br/>]]>
+   </description>
+   <styleUrl>#stop</styleUrl>
+   <Point>
+       <coordinates>-73.99028428333334,40.692513993333336</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[Stop at 05/10/17 08:48 AM EDT]]></name>
+   <description>
+       <![CDATA[
+Worker: MYROSLAV HRABOVSKY 9292713710<br/>Location:  <font class='unknown_location'>Unknown</font><br/>shore parkway<br/>brooklyn, NY 11209<br/><u>Stop Info</u><br/>Timecard status: Logged In<br/>Arr: 05/10/17 08:48 AM EDT<br/>Dep: 05/10/17 09:27 AM EDT<br/>Dur: 00:39 hrs.<br/><br/><u>Travel Info</u><br/>Dur: 00:11 hrs.<br/><br/>Dist: 6.3 miles<br/>]]>
+   </description>
+   <styleUrl>#stop</styleUrl>
+   <Point>
+       <coordinates>-74.03692622749999,40.6115992825</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[Stop at 05/10/17 09:38 AM EDT]]></name>
+   <description>
+       <![CDATA[
+Worker: MYROSLAV HRABOVSKY 9292713710<br/>Location:  <font class='unknown_location'>Unknown</font><br/>24th bond street<br/>brooklyn, NY 11224<br/><u>Stop Info</u><br/>Timecard status: Logged In<br/>Arr: 05/10/17 09:38 AM EDT<br/>Dep: 05/10/17 10:02 AM EDT<br/>Dur: 00:24 hrs.<br/><br/><u>Travel Info</u><br/>Dur: 00:11 hrs.<br/><br/>Dist: 3.5 miles<br/>]]>
+   </description>
+   <styleUrl>#stop</styleUrl>
+   <Point>
+       <coordinates>-73.991596292,40.576313719999995</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[Stop at 05/10/17 10:18 AM EDT]]></name>
+   <description>
+       <![CDATA[
+Worker: MYROSLAV HRABOVSKY 9292713710<br/>Location:  <font class='unknown_location'>Unknown</font><br/>1605 mcdonald avenue<br/>brooklyn, NY 11230<br/><u>Stop Info</u><br/>Timecard status: Logged In<br/>Arr: 05/10/17 10:18 AM EDT<br/>Dep: 05/10/17 10:58 AM EDT<br/>Dur: 00:39 hrs.<br/><br/><u>Travel Info</u><br/>Dur: 00:16 hrs.<br/><br/>Dist: 3.0 miles<br/>]]>
+   </description>
+   <styleUrl>#stop</styleUrl>
+   <Point>
+       <coordinates>-73.97364275875,40.6137282225</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[Stop at 05/10/17 11:08 AM EDT]]></name>
+   <description>
+       <![CDATA[
+Worker: MYROSLAV HRABOVSKY 9292713710<br/>Location:  <font class='unknown_location'>Unknown</font><br/>68-70 avenue t<br/>brooklyn, NY 11223<br/><u>Stop Info</u><br/>Timecard status: Logged In<br/>Arr: 05/10/17 11:08 AM EDT<br/>Dep: 05/10/17 11:33 AM EDT<br/>Dur: 00:25 hrs.<br/><br/><u>Travel Info</u><br/>Dur: 00:11 hrs.<br/><br/>Dist: 1.3 miles<br/>]]>
+   </description>
+   <styleUrl>#stop</styleUrl>
+   <Point>
+       <coordinates>-73.982703882,40.59818664</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[Stop at 05/10/17 11:33 AM EDT]]></name>
+   <description>
+       <![CDATA[
+Worker: MYROSLAV HRABOVSKY 9292713710<br/>Location:  <font class='unknown_location'>Unknown</font><br/>1884-1886 west 8th street<br/>brooklyn, NY 11223<br/><u>Stop Info</u><br/>Timecard status: Logged In<br/>Arr: 05/10/17 11:33 AM EDT<br/>Dep: 05/10/17 11:48 AM EDT<br/>Dur: 00:15 hrs.<br/><br/><u>Travel Info</u><br/>Dur: 00:00 hrs.<br/><br/>Dist: 0.1 miles<br/>]]>
+   </description>
+   <styleUrl>#stop</styleUrl>
+   <Point>
+       <coordinates>-73.98041244333334,40.60125051</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[Stop at 05/10/17 11:48 AM EDT]]></name>
+   <description>
+       <![CDATA[
+Worker: MYROSLAV HRABOVSKY 9292713710<br/>Location:  <font class='unknown_location'>Unknown</font><br/>1846-1850 west 4th street<br/>brooklyn, NY 11223<br/><u>Stop Info</u><br/>Timecard status: Logged In<br/>Arr: 05/10/17 11:48 AM EDT<br/>Dep: 05/10/17 12:32 PM EDT<br/>Dur: 00:44 hrs.<br/><br/><u>Travel Info</u><br/>Dur: 00:00 hrs.<br/><br/>Dist: 0.2 miles<br/>]]>
+   </description>
+   <styleUrl>#stop</styleUrl>
+   <Point>
+       <coordinates>-73.97671148444444,40.60253890333334</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[Stop at 05/10/17 12:43 PM EDT]]></name>
+   <description>
+       <![CDATA[
+Worker: MYROSLAV HRABOVSKY 9292713710<br/>Location:  <font class='unknown_location'>Unknown</font><br/>138 bay 20th street<br/>brooklyn, NY 11214<br/><u>Stop Info</u><br/>Timecard status: Logged In<br/>Arr: 05/10/17 12:43 PM EDT<br/>Dep: 05/10/17 02:18 PM EDT<br/>Dur: 01:34 hrs.<br/><br/><u>Travel Info</u><br/>Dur: 00:11 hrs.<br/><br/>Dist: 1.8 miles<br/>]]>
+   </description>
+   <styleUrl>#stop</styleUrl>
+   <Point>
+       <coordinates>-74.00421822631579,40.603930524736846</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[Stop at 05/10/17 02:18 PM EDT]]></name>
+   <description>
+       <![CDATA[
+Worker: MYROSLAV HRABOVSKY 9292713710<br/>Location:  <font class='unknown_location'>Unknown</font><br/>8500-8598 16th avenue<br/>brooklyn, NY 11214<br/><u>Stop Info</u><br/>Timecard status: Logged In<br/>Arr: 05/10/17 02:18 PM EDT<br/>Dep: 05/10/17 02:33 PM EDT<br/>Dur: 00:14 hrs.<br/><br/><u>Travel Info</u><br/>Dur: 00:01 hrs.<br/><br/>Dist: 0.3 miles<br/>]]>
+   </description>
+   <styleUrl>#stop</styleUrl>
+   <Point>
+       <coordinates>-74.00673905000001,40.61062251333333</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[Stop at 05/10/17 02:38 PM EDT]]></name>
+   <description>
+       <![CDATA[
+Worker: MYROSLAV HRABOVSKY 9292713710<br/>Location:  <font class='unknown_location'>Unknown</font><br/>1549 bay ridge parkway<br/>brooklyn, NY 11228<br/><u>Stop Info</u><br/>Timecard status: Logged In<br/>Arr: 05/10/17 02:38 PM EDT<br/>Dep: 05/10/17 02:53 PM EDT<br/>Dur: 00:15 hrs.<br/><br/><u>Travel Info</u><br/>Dur: 00:06 hrs.<br/><br/>Dist: 0.6 miles<br/>]]>
+   </description>
+   <styleUrl>#stop</styleUrl>
+   <Point>
+       <coordinates>-74.00156865666666,40.61688723666666</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[Stop at 05/10/17 03:08 PM EDT]]></name>
+   <description>
+       <![CDATA[
+Worker: MYROSLAV HRABOVSKY 9292713710<br/>Location:  <font class='unknown_location'>Unknown</font><br/>224 wakeman place<br/>brooklyn, NY 11220<br/><u>Stop Info</u><br/>Timecard status: Logged In<br/>Arr: 05/10/17 03:08 PM EDT<br/>Dep: 05/10/17 03:22 PM EDT<br/>Dur: 00:13 hrs.<br/><br/><u>Travel Info</u><br/>Dur: 00:15 hrs.<br/><br/>Dist: 2.1 miles<br/>]]>
+   </description>
+   <styleUrl>#stop</styleUrl>
+   <Point>
+       <coordinates>-74.02593145333333,40.638606046666666</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[Stop at 05/10/17 03:23 PM EDT]]></name>
+   <description>
+       <![CDATA[
+Worker: MYROSLAV HRABOVSKY 9292713710<br/>Location:  <font class='unknown_location'>Unknown</font><br/>5200-5202 5th avenue<br/>brooklyn, NY 11220<br/><u>Stop Info</u><br/>Timecard status: Logged In<br/>Arr: 05/10/17 03:23 PM EDT<br/>Dep: 05/10/17 03:43 PM EDT<br/>Dur: 00:20 hrs.<br/><br/><u>Travel Info</u><br/>Dur: 00:02 hrs.<br/><br/>Dist: 0.7 miles<br/>]]>
+   </description>
+   <styleUrl>#stop</styleUrl>
+   <Point>
+       <coordinates>-74.0115773075,40.6439010475</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[Stop at 05/10/17 03:54 PM EDT]]></name>
+   <description>
+       <![CDATA[
+Worker: MYROSLAV HRABOVSKY 9292713710<br/>Location:  <font class='unknown_location'>Unknown</font><br/>8322 4th avenue<br/>brooklyn, NY 11209<br/><u>Stop Info</u><br/>Timecard status: Logged In<br/>Arr: 05/10/17 03:54 PM EDT<br/>Dep: 05/11/17 07:02 AM EDT<br/>Dur: 15:09 hrs.<br/><br/><u>Travel Info</u><br/>Dur: 00:11 hrs.<br/><br/>Dist: 1.8 miles<br/>]]>
+   </description>
+   <styleUrl>#stop</styleUrl>
+   <Point>
+       <coordinates>-74.02786351866668,40.62454636466667</coordinates>
+   </Point>
+</Placemark>
+</Folder>
+</Document>
+</kml>
