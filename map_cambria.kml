@@ -1,0 +1,752 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.1">
+<Document>
+<name>Map</name>
+<open>1</open>
+<description>View locations on the Google Map</description>
+<LookAt>
+<longitude>-73.88463039166663</longitude>
+<latitude>40.89644261222222</latitude>
+<altitude>0</altitude>
+<range>18750.0</range>
+<tilt>0</tilt>
+<heading>0</heading>
+</LookAt>
+<Style id="stop">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/stop.gif</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="VerizonLessThan5ArrowS">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/VerizonLessThan5ArrowS.png</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="VerizonBetween30and65ArrowNE">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/VerizonBetween30and65ArrowNE.png</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="VerizonBetween30and65ArrowS">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/VerizonBetween30and65ArrowS.png</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="landmark_company">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/landmark_company.gif</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="VerizonLessThan5ArrowW">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/VerizonLessThan5ArrowW.png</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="vzw_worker_green">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/vzw_worker_green.png</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="VerizonLessThan5ArrowNE">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/VerizonLessThan5ArrowNE.png</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="VerizonBetween5and30ArrowSW">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/VerizonBetween5and30ArrowSW.png</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="landmark_general">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/landmark_general.gif</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="VerizonBetween30and65ArrowN">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/VerizonBetween30and65ArrowN.png</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="VerizonLessThan5NoDirection">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/VerizonLessThan5NoDirection.png</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="VerizonBetween5and30ArrowNW">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/VerizonBetween5and30ArrowNW.png</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="VerizonBetween5and30ArrowN">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/VerizonBetween5and30ArrowN.png</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="VerizonBetween5and30ArrowW">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/VerizonBetween5and30ArrowW.png</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="VerizonLessThan5ArrowNW">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/VerizonLessThan5ArrowNW.png</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="VerizonBetween5and30ArrowE">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/VerizonBetween5and30ArrowE.png</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="VerizonBetween5and30ArrowS">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/VerizonBetween5and30ArrowS.png</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Folder>
+<name>Workers</name>
+<open>1</open>
+<description>View workers</description><Placemark>
+   <name><![CDATA[SAL CAMBRIA 3476336148]]></name>
+   <description>
+       <![CDATA[
+3810 bailey avenue<br/>bronx, NY 10463<br/>As of: 05/19/17<br/>01:12 PM EDT<br/>Status: Logged In<br/>]]>
+   </description>
+   <styleUrl>#vzw_worker_green</styleUrl>
+   <Point>
+       <coordinates>-73.89693107,40.88414973</coordinates>
+   </Point>
+</Placemark>
+</Folder>
+<Folder>
+<name>Landmarks</name>
+<open>1</open>
+<description>View landmarks</description><Placemark>
+   <name><![CDATA[280 Broadway]]></name>
+   <description>
+       <![CDATA[
+280 broadway<br/>new york, new york 10007]]>
+   </description>
+   <styleUrl>#landmark_general</styleUrl>
+   <Point>
+       <coordinates>-74.00582242018572,40.714292091735246</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[field]]></name>
+   <description>
+       <![CDATA[
+4304 12th ave<br/>brooklyn, NY 11219]]>
+   </description>
+   <styleUrl>#landmark_company</styleUrl>
+   <Point>
+       <coordinates>-73.9911304,40.6396366</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[inspection]]></name>
+   <description>
+       <![CDATA[
+200 varick st<br/>new york, NY 10007]]>
+   </description>
+   <styleUrl>#landmark_general</styleUrl>
+   <Point>
+       <coordinates>-74.0050692,40.728142</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[Municipal Bldg]]></name>
+   <description>
+       <![CDATA[
+1 centre st<br/>new york, ny 10007]]>
+   </description>
+   <styleUrl>#landmark_company</styleUrl>
+   <Point>
+       <coordinates>-74.003748,40.712931</coordinates>
+   </Point>
+</Placemark>
+</Folder>
+<Folder>
+<name>GPS points</name>
+<open>1</open>
+<description>View GPS points</description><Placemark>
+   <name><![CDATA[05/10/17 07:58 AM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: SAL CAMBRIA 3476336148</b><br/>45 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween30and65ArrowS</styleUrl>
+   <Point>
+       <coordinates>-73.86771111,40.98033918</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 08:03 AM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: SAL CAMBRIA 3476336148</b><br/>55 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween30and65ArrowS</styleUrl>
+   <Point>
+       <coordinates>-73.87875385,40.935306</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 08:08 AM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: SAL CAMBRIA 3476336148</b><br/>6 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween5and30ArrowS</styleUrl>
+   <Point>
+       <coordinates>-73.88723036,40.88624896</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 08:13 AM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: SAL CAMBRIA 3476336148</b><br/>9 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween5and30ArrowSW</styleUrl>
+   <Point>
+       <coordinates>-73.89452606,40.87508539</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 08:18 AM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: SAL CAMBRIA 3476336148</b><br/>22 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween5and30ArrowSW</styleUrl>
+   <Point>
+       <coordinates>-73.90140235,40.86488938</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 09:03 AM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: SAL CAMBRIA 3476336148</b><br/>0 mph]]>
+   </description>
+   <styleUrl>#VerizonLessThan5NoDirection</styleUrl>
+   <Point>
+       <coordinates>-73.90023466,40.86385198</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 09:38 AM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: SAL CAMBRIA 3476336148</b><br/>12 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween5and30ArrowSW</styleUrl>
+   <Point>
+       <coordinates>-73.91052235,40.85278882</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 09:43 AM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: SAL CAMBRIA 3476336148</b><br/>13 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween5and30ArrowS</styleUrl>
+   <Point>
+       <coordinates>-73.92115725,40.84665142</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 09:48 AM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: SAL CAMBRIA 3476336148</b><br/>2 mph]]>
+   </description>
+   <styleUrl>#VerizonLessThan5ArrowS</styleUrl>
+   <Point>
+       <coordinates>-73.92033237,40.83539344</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 09:53 AM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: SAL CAMBRIA 3476336148</b><br/>17 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween5and30ArrowS</styleUrl>
+   <Point>
+       <coordinates>-73.91394567,40.8327967</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 09:58 AM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: SAL CAMBRIA 3476336148</b><br/>4 mph]]>
+   </description>
+   <styleUrl>#VerizonLessThan5ArrowW</styleUrl>
+   <Point>
+       <coordinates>-73.9079283,40.83725557</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 11:08 AM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: SAL CAMBRIA 3476336148</b><br/>0 mph]]>
+   </description>
+   <styleUrl>#VerizonLessThan5NoDirection</styleUrl>
+   <Point>
+       <coordinates>-73.89903341,40.84446981</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 11:13 AM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: SAL CAMBRIA 3476336148</b><br/>0 mph]]>
+   </description>
+   <styleUrl>#VerizonLessThan5NoDirection</styleUrl>
+   <Point>
+       <coordinates>-73.91107149,40.83794028</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 12:13 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: SAL CAMBRIA 3476336148</b><br/>26 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween5and30ArrowS</styleUrl>
+   <Point>
+       <coordinates>-73.91236181,40.84274465</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 12:18 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: SAL CAMBRIA 3476336148</b><br/>0 mph]]>
+   </description>
+   <styleUrl>#VerizonLessThan5NoDirection</styleUrl>
+   <Point>
+       <coordinates>-73.91999765,40.83229566</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 12:23 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: SAL CAMBRIA 3476336148</b><br/>11 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween5and30ArrowW</styleUrl>
+   <Point>
+       <coordinates>-73.93125582,40.82824571</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 12:58 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: SAL CAMBRIA 3476336148</b><br/>33 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween30and65ArrowNE</styleUrl>
+   <Point>
+       <coordinates>-73.90636933,40.80700942</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 01:03 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: SAL CAMBRIA 3476336148</b><br/>9 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween5and30ArrowE</styleUrl>
+   <Point>
+       <coordinates>-73.85304462,40.82660693</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 01:40 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: SAL CAMBRIA 3476336148</b><br/>0 mph]]>
+   </description>
+   <styleUrl>#VerizonLessThan5NoDirection</styleUrl>
+   <Point>
+       <coordinates>-73.83807313,40.82330462</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 01:43 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: SAL CAMBRIA 3476336148</b><br/>0 mph]]>
+   </description>
+   <styleUrl>#VerizonLessThan5NoDirection</styleUrl>
+   <Point>
+       <coordinates>-73.83757375,40.82371926</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 01:48 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: SAL CAMBRIA 3476336148</b><br/>9 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween5and30ArrowNW</styleUrl>
+   <Point>
+       <coordinates>-73.84385613,40.8289183</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 02:38 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: SAL CAMBRIA 3476336148</b><br/>0 mph]]>
+   </description>
+   <styleUrl>#VerizonLessThan5NoDirection</styleUrl>
+   <Point>
+       <coordinates>-73.85232627,40.83759676</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 02:43 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: SAL CAMBRIA 3476336148</b><br/>4 mph]]>
+   </description>
+   <styleUrl>#VerizonLessThan5ArrowNE</styleUrl>
+   <Point>
+       <coordinates>-73.85092039,40.84091191</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 02:48 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: SAL CAMBRIA 3476336148</b><br/>0 mph]]>
+   </description>
+   <styleUrl>#VerizonLessThan5NoDirection</styleUrl>
+   <Point>
+       <coordinates>-73.85052831,40.84159682</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 02:53 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: SAL CAMBRIA 3476336148</b><br/>5 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween5and30ArrowNW</styleUrl>
+   <Point>
+       <coordinates>-73.85536152,40.84299161</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 02:58 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: SAL CAMBRIA 3476336148</b><br/>1 mph]]>
+   </description>
+   <styleUrl>#VerizonLessThan5ArrowNW</styleUrl>
+   <Point>
+       <coordinates>-73.85146139,40.85023083</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 03:18 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: SAL CAMBRIA 3476336148</b><br/>13 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween5and30ArrowS</styleUrl>
+   <Point>
+       <coordinates>-73.86788028,40.85236602</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 03:53 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: SAL CAMBRIA 3476336148</b><br/>1 mph]]>
+   </description>
+   <styleUrl>#VerizonLessThan5ArrowNE</styleUrl>
+   <Point>
+       <coordinates>-73.86370661,40.85447687</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 03:58 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: SAL CAMBRIA 3476336148</b><br/>4 mph]]>
+   </description>
+   <styleUrl>#VerizonLessThan5ArrowNW</styleUrl>
+   <Point>
+       <coordinates>-73.86779688,40.85694818</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 04:13 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: SAL CAMBRIA 3476336148</b><br/>26 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween5and30ArrowN</styleUrl>
+   <Point>
+       <coordinates>-73.87054409,40.87045706</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 04:18 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: SAL CAMBRIA 3476336148</b><br/>17 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween5and30ArrowN</styleUrl>
+   <Point>
+       <coordinates>-73.86754832,40.88125432</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 04:23 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: SAL CAMBRIA 3476336148</b><br/>0 mph]]>
+   </description>
+   <styleUrl>#VerizonLessThan5NoDirection</styleUrl>
+   <Point>
+       <coordinates>-73.8627217,40.8915034</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 04:28 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: SAL CAMBRIA 3476336148</b><br/>48 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween30and65ArrowNE</styleUrl>
+   <Point>
+       <coordinates>-73.85062438,40.91357787</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 04:33 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: SAL CAMBRIA 3476336148</b><br/>52 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween30and65ArrowN</styleUrl>
+   <Point>
+       <coordinates>-73.84858,40.964836</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 04:38 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: SAL CAMBRIA 3476336148</b><br/>24 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween5and30ArrowW</styleUrl>
+   <Point>
+       <coordinates>-73.85440294,40.98567376</coordinates>
+   </Point>
+</Placemark>
+</Folder>
+<Folder>
+<name>Map trip segments</name>
+<open>1</open>
+<description>View map trip segments</description><Placemark>
+   <name><![CDATA[Stop at 05/09/17 07:33 PM EDT]]></name>
+   <description>
+       <![CDATA[
+Worker: SAL CAMBRIA 3476336148<br/>Location:  <font class='unknown_location'>Unknown</font><br/>30 edith's way<br/>NY 10706<br/><u>Stop Info</u><br/>Timecard status: Logged In<br/>Arr: 05/09/17 07:33 PM EDT<br/>Dep: 05/10/17 07:57 AM EDT<br/>Dur: 12:23 hrs.<br/><br/>]]>
+   </description>
+   <styleUrl>#stop</styleUrl>
+   <Point>
+       <coordinates>-73.86186819666666,40.98587580444445</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[Stop at 05/10/17 08:23 AM EDT]]></name>
+   <description>
+       <![CDATA[
+Worker: SAL CAMBRIA 3476336148<br/>Location:  <font class='unknown_location'>Unknown</font><br/>27 east kingsbridge road<br/>bronx, NY 10468<br/><u>Stop Info</u><br/>Timecard status: Logged In<br/>Arr: 05/10/17 08:23 AM EDT<br/>Dep: 05/10/17 09:02 AM EDT<br/>Dur: 00:39 hrs.<br/><br/><u>Travel Info</u><br/>Dur: 00:26 hrs.<br/><br/>Dist: 8.9 miles<br/>]]>
+   </description>
+   <styleUrl>#stop</styleUrl>
+   <Point>
+       <coordinates>-73.89643803999999,40.86728541</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[Stop at 05/10/17 09:08 AM EDT]]></name>
+   <description>
+       <![CDATA[
+Worker: SAL CAMBRIA 3476336148<br/>Location:  <font class='unknown_location'>Unknown</font><br/>2333 grand avenue<br/>bronx, NY 10468<br/><u>Stop Info</u><br/>Timecard status: Logged In<br/>Arr: 05/10/17 09:08 AM EDT<br/>Dep: 05/10/17 09:37 AM EDT<br/>Dur: 00:29 hrs.<br/><br/><u>Travel Info</u><br/>Dur: 00:06 hrs.<br/><br/>Dist: 0.6 miles<br/>]]>
+   </description>
+   <styleUrl>#stop</styleUrl>
+   <Point>
+       <coordinates>-73.90471853000001,40.86118203</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[Stop at 05/10/17 10:03 AM EDT]]></name>
+   <description>
+       <![CDATA[
+Worker: SAL CAMBRIA 3476336148<br/>Location:  <font class='unknown_location'>Unknown</font><br/>1818 clay avenue<br/>bronx, NY 10457<br/><u>Stop Info</u><br/>Timecard status: Logged In<br/>Arr: 05/10/17 10:03 AM EDT<br/>Dep: 05/10/17 10:22 AM EDT<br/>Dur: 00:19 hrs.<br/><br/><u>Travel Info</u><br/>Dur: 00:26 hrs.<br/><br/>Dist: 3.5 miles<br/>]]>
+   </description>
+   <styleUrl>#stop</styleUrl>
+   <Point>
+       <coordinates>-73.9042194425,40.8470593125</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[Stop at 05/10/17 10:23 AM EDT]]></name>
+   <description>
+       <![CDATA[
+Worker: SAL CAMBRIA 3476336148<br/>Location:  <font class='unknown_location'>Unknown</font><br/>2086 arthur avenue<br/>bronx, NY 10457<br/><u>Stop Info</u><br/>Timecard status: Logged In<br/>Arr: 05/10/17 10:23 AM EDT<br/>Dep: 05/10/17 11:07 AM EDT<br/>Dur: 00:44 hrs.<br/><br/><u>Travel Info</u><br/>Dur: 00:01 hrs.<br/><br/>Dist: 0.5 miles<br/>]]>
+   </description>
+   <styleUrl>#stop</styleUrl>
+   <Point>
+       <coordinates>-73.89349926285715,40.84547269857143</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[Stop at 05/10/17 11:18 AM EDT]]></name>
+   <description>
+       <![CDATA[
+Worker: SAL CAMBRIA 3476336148<br/>Location:  <font class='unknown_location'>Unknown</font><br/>1781 monroe avenue<br/>bronx, NY 10457<br/><u>Stop Info</u><br/>Timecard status: Logged In<br/>Arr: 05/10/17 11:18 AM EDT<br/>Dep: 05/10/17 12:12 PM EDT<br/>Dur: 00:54 hrs.<br/><br/><u>Travel Info</u><br/>Dur: 00:11 hrs.<br/><br/>Dist: 1.5 miles<br/>]]>
+   </description>
+   <styleUrl>#stop</styleUrl>
+   <Point>
+       <coordinates>-73.90675264454546,40.84638397</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[Stop at 05/10/17 12:28 PM EDT]]></name>
+   <description>
+       <![CDATA[
+Worker: SAL CAMBRIA 3476336148<br/>Location:  <font class='unknown_location'>Unknown</font><br/>610 exterior street<br/>bronx, NY 10451<br/><u>Stop Info</u><br/>Timecard status: Logged In<br/>Arr: 05/10/17 12:28 PM EDT<br/>Dep: 05/10/17 12:42 PM EDT<br/>Dur: 00:14 hrs.<br/><br/><u>Travel Info</u><br/>Dur: 00:16 hrs.<br/><br/>Dist: 2.2 miles<br/>]]>
+   </description>
+   <styleUrl>#stop</styleUrl>
+   <Point>
+       <coordinates>-73.93040590999999,40.822990196666666</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[Stop at 05/10/17 12:43 PM EDT]]></name>
+   <description>
+       <![CDATA[
+Worker: SAL CAMBRIA 3476336148<br/>Location:  <font class='unknown_location'>Unknown</font><br/>355 exterior street<br/>bronx, NY 10451<br/><u>Stop Info</u><br/>Timecard status: Logged In<br/>Arr: 05/10/17 12:43 PM EDT<br/>Dep: 05/10/17 12:55 PM EDT<br/>Dur: 00:12 hrs.<br/><br/><u>Travel Info</u><br/>Dur: 00:01 hrs.<br/><br/>Dist: 0.4 miles<br/>]]>
+   </description>
+   <styleUrl>#stop</styleUrl>
+   <Point>
+       <coordinates>-73.93168703333333,40.81638799666666</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[Stop at 05/10/17 01:08 PM EDT]]></name>
+   <description>
+       <![CDATA[
+Worker: SAL CAMBRIA 3476336148<br/>Location:  <font class='unknown_location'>Unknown</font><br/>bruckner boulevard<br/>bronx, NY 10465<br/><u>Stop Info</u><br/>Timecard status: Logged In<br/>Arr: 05/10/17 01:08 PM EDT<br/>Dep: 05/10/17 01:39 PM EDT<br/>Dur: 00:31 hrs.<br/><br/><u>Travel Info</u><br/>Dur: 00:13 hrs.<br/><br/>Dist: 5.2 miles<br/>]]>
+   </description>
+   <styleUrl>#stop</styleUrl>
+   <Point>
+       <coordinates>-73.83921175,40.827729184000006</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[Stop at 05/10/17 01:53 PM EDT]]></name>
+   <description>
+       <![CDATA[
+Worker: SAL CAMBRIA 3476336148<br/>Location:  <font class='unknown_location'>Unknown</font><br/>2115 cross bronx expressway<br/>bronx, NY 10462<br/><u>Stop Info</u><br/>Timecard status: Logged In<br/>Arr: 05/10/17 01:53 PM EDT<br/>Dep: 05/10/17 02:37 PM EDT<br/>Dur: 00:44 hrs.<br/><br/><u>Travel Info</u><br/>Dur: 00:14 hrs.<br/><br/>Dist: 1.2 miles<br/>]]>
+   </description>
+   <styleUrl>#stop</styleUrl>
+   <Point>
+       <coordinates>-73.85291857666667,40.83129395111112</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[Stop at 05/10/17 03:03 PM EDT]]></name>
+   <description>
+       <![CDATA[
+Worker: SAL CAMBRIA 3476336148<br/>Location:  <font class='unknown_location'>Unknown</font><br/>2079 muliner avenue<br/>bronx, NY 10462<br/><u>Stop Info</u><br/>Timecard status: Logged In<br/>Arr: 05/10/17 03:03 PM EDT<br/>Dep: 05/10/17 03:17 PM EDT<br/>Dur: 00:14 hrs.<br/><br/><u>Travel Info</u><br/>Dur: 00:26 hrs.<br/><br/>Dist: 2.0 miles<br/>]]>
+   </description>
+   <styleUrl>#stop</styleUrl>
+   <Point>
+       <coordinates>-73.86228599333333,40.85287687333334</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[Stop at 05/10/17 03:23 PM EDT]]></name>
+   <description>
+       <![CDATA[
+Worker: SAL CAMBRIA 3476336148<br/>Location:  <font class='unknown_location'>Unknown</font><br/>1935 barnes avenue<br/>bronx, NY 10462<br/><u>Stop Info</u><br/>Timecard status: Logged In<br/>Arr: 05/10/17 03:23 PM EDT<br/>Dep: 05/10/17 03:53 PM EDT<br/>Dur: 00:30 hrs.<br/><br/><u>Travel Info</u><br/>Dur: 00:06 hrs.<br/><br/>Dist: 0.6 miles<br/>]]>
+   </description>
+   <styleUrl>#stop</styleUrl>
+   <Point>
+       <coordinates>-73.86405902666667,40.849238211666666</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[Stop at 05/10/17 04:03 PM EDT]]></name>
+   <description>
+       <![CDATA[
+Worker: SAL CAMBRIA 3476336148<br/>Location:  <font class='unknown_location'>Unknown</font><br/>2550 olinville avenue<br/>bronx, NY 10467<br/><u>Stop Info</u><br/>Timecard status: Logged In<br/>Arr: 05/10/17 04:03 PM EDT<br/>Dep: 05/10/17 04:12 PM EDT<br/>Dur: 00:09 hrs.<br/><br/><u>Travel Info</u><br/>Dur: 00:10 hrs.<br/><br/>Dist: 0.9 miles<br/>]]>
+   </description>
+   <styleUrl>#stop</styleUrl>
+   <Point>
+       <coordinates>-73.868269695,40.864414284999995</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[Stop at 05/10/17 04:43 PM EDT]]></name>
+   <description>
+       <![CDATA[
+Worker: SAL CAMBRIA 3476336148<br/>Location:  <font class='unknown_location'>Unknown</font><br/>30 edith's way<br/>NY 10706<br/><u>Stop Info</u><br/>Timecard status: Logged In<br/>Arr: 05/10/17 04:43 PM EDT<br/>Dep: 05/11/17 07:48 AM EDT<br/>Dur: 15:05 hrs.<br/><br/><u>Travel Info</u><br/>Dur: 00:31 hrs.<br/><br/>Dist: 9.0 miles<br/>]]>
+   </description>
+   <styleUrl>#stop</styleUrl>
+   <Point>
+       <coordinates>-73.861797985,40.98587424142857</coordinates>
+   </Point>
+</Placemark>
+</Folder>
+</Document>
+</kml>

@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.1">
+<Document>
+<name>Map</name>
+<open>1</open>
+<description>View locations on the Google Map</description>
+<LookAt>
+<longitude>-73.88029417274475</longitude>
+<latitude>40.621873075013355</latitude>
+<altitude>0</altitude>
+<range>18750.0</range>
+<tilt>0</tilt>
+<heading>0</heading>
+</LookAt>
+<Style id="vzw_worker_green">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/vzw_worker_green.png</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="stop">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/stop.gif</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="VerizonBetween5and30ArrowSW">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/VerizonBetween5and30ArrowSW.png</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="landmark_general">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/landmark_general.gif</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="VerizonLessThan5ArrowS">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/VerizonLessThan5ArrowS.png</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="VerizonLessThan5NoDirection">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/VerizonLessThan5NoDirection.png</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="VerizonBetween5and30ArrowNW">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/VerizonBetween5and30ArrowNW.png</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="VerizonLessThan5ArrowNW">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/VerizonLessThan5ArrowNW.png</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="VerizonBetween5and30ArrowN">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/VerizonBetween5and30ArrowN.png</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="VerizonLessThan5ArrowSW">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/VerizonLessThan5ArrowSW.png</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="VerizonBetween5and30ArrowE">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/VerizonBetween5and30ArrowE.png</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="landmark_company">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/landmark_company.gif</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="VerizonBetween5and30ArrowSE">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/VerizonBetween5and30ArrowSE.png</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="EndShift">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/EndShift.gif</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Style id="VerizonBetween5and30ArrowS">
+   <IconStyle>
+        <Icon>
+          <href>https://www.fieldforcemanager.com/adapter/themes/Verizon/images/VerizonBetween5and30ArrowS.png</href>
+        </Icon>
+   </IconStyle>
+</Style>
+<Folder>
+<name>Workers</name>
+<open>1</open>
+<description>View workers</description><Placemark>
+   <name><![CDATA[BORIS KOGAN 9175660875]]></name>
+   <description>
+       <![CDATA[
+Location:  <font class='unknown_location'>Unknown</font><br/>2830 brighton 3rd street<br/>brooklyn, NY 11235<br/>As of: 05/19/17<br/>01:19 PM EDT<br/>Status: Logged In<br/>]]>
+   </description>
+   <styleUrl>#vzw_worker_green</styleUrl>
+   <Point>
+       <coordinates>-73.96567414076922,40.58239697384616</coordinates>
+   </Point>
+</Placemark>
+</Folder>
+<Folder>
+<name>Landmarks</name>
+<open>1</open>
+<description>View landmarks</description><Placemark>
+   <name><![CDATA[280 Broadway]]></name>
+   <description>
+       <![CDATA[
+280 broadway<br/>new york, new york 10007]]>
+   </description>
+   <styleUrl>#landmark_general</styleUrl>
+   <Point>
+       <coordinates>-74.00582242018572,40.714292091735246</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[field]]></name>
+   <description>
+       <![CDATA[
+4304 12th ave<br/>brooklyn, NY 11219]]>
+   </description>
+   <styleUrl>#landmark_company</styleUrl>
+   <Point>
+       <coordinates>-73.9911304,40.6396366</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[inspection]]></name>
+   <description>
+       <![CDATA[
+200 varick st<br/>new york, NY 10007]]>
+   </description>
+   <styleUrl>#landmark_general</styleUrl>
+   <Point>
+       <coordinates>-74.0050692,40.728142</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[Municipal Bldg]]></name>
+   <description>
+       <![CDATA[
+1 centre st<br/>new york, ny 10007]]>
+   </description>
+   <styleUrl>#landmark_company</styleUrl>
+   <Point>
+       <coordinates>-74.003748,40.712931</coordinates>
+   </Point>
+</Placemark>
+</Folder>
+<Folder>
+<name>GPS points</name>
+<open>1</open>
+<description>View GPS points</description><Placemark>
+   <name><![CDATA[05/10/17 07:03 AM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: BORIS KOGAN 9175660875</b><br/>28 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween5and30ArrowN</styleUrl>
+   <Point>
+       <coordinates>-73.95129208,40.59978215</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 07:08 AM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: BORIS KOGAN 9175660875</b><br/>8 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween5and30ArrowN</styleUrl>
+   <Point>
+       <coordinates>-73.95392301,40.61304696</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 07:13 AM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: BORIS KOGAN 9175660875</b><br/>21 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween5and30ArrowN</styleUrl>
+   <Point>
+       <coordinates>-73.95789476,40.63494901</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 07:18 AM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: BORIS KOGAN 9175660875</b><br/>9 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween5and30ArrowN</styleUrl>
+   <Point>
+       <coordinates>-73.96007555,40.64575518</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 07:23 AM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: BORIS KOGAN 9175660875</b><br/>13 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween5and30ArrowNW</styleUrl>
+   <Point>
+       <coordinates>-73.96175912,40.65418143</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 07:28 AM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: BORIS KOGAN 9175660875</b><br/>22 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween5and30ArrowNW</styleUrl>
+   <Point>
+       <coordinates>-73.96446687,40.6661185</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 07:33 AM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: BORIS KOGAN 9175660875</b><br/>6 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween5and30ArrowNW</styleUrl>
+   <Point>
+       <coordinates>-73.97282662,40.67767595</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 07:38 AM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: BORIS KOGAN 9175660875</b><br/>1 mph]]>
+   </description>
+   <styleUrl>#VerizonLessThan5ArrowNW</styleUrl>
+   <Point>
+       <coordinates>-73.97876405,40.68644219</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 09:48 AM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: BORIS KOGAN 9175660875</b><br/>0 mph]]>
+   </description>
+   <styleUrl>#VerizonLessThan5NoDirection</styleUrl>
+   <Point>
+       <coordinates>-73.98638396,40.70035804</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 09:53 AM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: BORIS KOGAN 9175660875</b><br/>0 mph]]>
+   </description>
+   <styleUrl>#VerizonLessThan5NoDirection</styleUrl>
+   <Point>
+       <coordinates>-73.96519398,40.69560433</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 12:33 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: BORIS KOGAN 9175660875</b><br/>12 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween5and30ArrowE</styleUrl>
+   <Point>
+       <coordinates>-73.94902388,40.6955861</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 12:38 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: BORIS KOGAN 9175660875</b><br/>6 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween5and30ArrowN</styleUrl>
+   <Point>
+       <coordinates>-73.94358429,40.69768553</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 12:58 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: BORIS KOGAN 9175660875</b><br/>2 mph]]>
+   </description>
+   <styleUrl>#VerizonLessThan5ArrowSW</styleUrl>
+   <Point>
+       <coordinates>-73.94819524,40.70668233</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 02:24 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: BORIS KOGAN 9175660875</b><br/>20 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween5and30ArrowS</styleUrl>
+   <Point>
+       <coordinates>-73.95569297,40.71165147</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 02:29 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: BORIS KOGAN 9175660875</b><br/>1 mph]]>
+   </description>
+   <styleUrl>#VerizonLessThan5ArrowS</styleUrl>
+   <Point>
+       <coordinates>-73.95931976,40.70559576</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 03:14 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: BORIS KOGAN 9175660875</b><br/>0 mph]]>
+   </description>
+   <styleUrl>#VerizonLessThan5NoDirection</styleUrl>
+   <Point>
+       <coordinates>-73.95821633,40.69891251</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 03:19 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: BORIS KOGAN 9175660875</b><br/>0 mph]]>
+   </description>
+   <styleUrl>#VerizonLessThan5NoDirection</styleUrl>
+   <Point>
+       <coordinates>-73.96348698,40.69676997</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 03:24 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: BORIS KOGAN 9175660875</b><br/>0 mph]]>
+   </description>
+   <styleUrl>#VerizonLessThan5NoDirection</styleUrl>
+   <Point>
+       <coordinates>-73.96688798,40.69402768</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 03:29 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: BORIS KOGAN 9175660875</b><br/>10 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween5and30ArrowS</styleUrl>
+   <Point>
+       <coordinates>-73.96533693,40.68541111</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 03:34 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: BORIS KOGAN 9175660875</b><br/>0 mph]]>
+   </description>
+   <styleUrl>#VerizonLessThan5NoDirection</styleUrl>
+   <Point>
+       <coordinates>-73.96784667,40.67971008</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 03:39 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: BORIS KOGAN 9175660875</b><br/>22 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween5and30ArrowSE</styleUrl>
+   <Point>
+       <coordinates>-73.96574482,40.66789293</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 03:44 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: BORIS KOGAN 9175660875</b><br/>0 mph]]>
+   </description>
+   <styleUrl>#VerizonLessThan5NoDirection</styleUrl>
+   <Point>
+       <coordinates>-73.962919,40.66029313</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 03:59 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: BORIS KOGAN 9175660875</b><br/>21 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween5and30ArrowSW</styleUrl>
+   <Point>
+       <coordinates>-73.96651857,40.6530961</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 04:04 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: BORIS KOGAN 9175660875</b><br/>14 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween5and30ArrowS</styleUrl>
+   <Point>
+       <coordinates>-73.9743516,40.6438115</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 04:09 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: BORIS KOGAN 9175660875</b><br/>0 mph]]>
+   </description>
+   <styleUrl>#VerizonLessThan5NoDirection</styleUrl>
+   <Point>
+       <coordinates>-73.97241899,40.63483921</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 04:14 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: BORIS KOGAN 9175660875</b><br/>27 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween5and30ArrowS</styleUrl>
+   <Point>
+       <coordinates>-73.96975876,40.62041285</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 04:44 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: BORIS KOGAN 9175660875</b><br/>0 mph]]>
+   </description>
+   <styleUrl>#VerizonLessThan5NoDirection</styleUrl>
+   <Point>
+       <coordinates>-73.96788803,40.60241045</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 04:49 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: BORIS KOGAN 9175660875</b><br/>0 mph]]>
+   </description>
+   <styleUrl>#VerizonLessThan5NoDirection</styleUrl>
+   <Point>
+       <coordinates>-73.96397419,40.59465927</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 04:54 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: BORIS KOGAN 9175660875</b><br/>14 mph]]>
+   </description>
+   <styleUrl>#VerizonBetween5and30ArrowE</styleUrl>
+   <Point>
+       <coordinates>-73.95683456,40.58751911</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[05/10/17 04:59 PM EDT]]></name>
+   <description>
+       <![CDATA[
+<b>Worker: BORIS KOGAN 9175660875</b><br/>0 mph]]>
+   </description>
+   <styleUrl>#VerizonLessThan5NoDirection</styleUrl>
+   <Point>
+       <coordinates>-73.95263381,40.58646715</coordinates>
+   </Point>
+</Placemark>
+</Folder>
+<Folder>
+<name>Map trip segments</name>
+<open>1</open>
+<description>View map trip segments</description><Placemark>
+   <name><![CDATA[Stop at 05/09/17 04:03 PM EDT]]></name>
+   <description>
+       <![CDATA[
+Worker: BORIS KOGAN 9175660875<br/>Location:  <font class='unknown_location'>Unknown</font><br/>3705 mermaid avenue<br/>brooklyn, NY 11224<br/><u>Stop Info</u><br/>Timecard status: On Duty<br/>Arr: 05/09/17 04:03 PM EDT<br/>Dep: 05/10/17 06:57 AM EDT<br/>Dur: 14:54 hrs.<br/><br/>]]>
+   </description>
+   <styleUrl>#stop</styleUrl>
+   <Point>
+       <coordinates>-74.00330416416666,40.574761807499996</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[Stop at 05/10/17 07:43 AM EDT]]></name>
+   <description>
+       <![CDATA[
+Worker: BORIS KOGAN 9175660875<br/>Location:  <font class='unknown_location'>Unknown</font><br/>44 court street<br/>brooklyn, NY 11201<br/><u>Stop Info</u><br/>Timecard status: On Duty<br/>Arr: 05/10/17 07:43 AM EDT<br/>Dep: 05/10/17 09:48 AM EDT<br/>Dur: 02:04 hrs.<br/><br/><u>Travel Info</u><br/>Dur: 00:46 hrs.<br/><br/>Dist: 10.2 miles<br/>]]>
+   </description>
+   <styleUrl>#stop</styleUrl>
+   <Point>
+       <coordinates>-73.99095228499999,40.69254760125</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[Stop at 05/10/17 09:58 AM EDT]]></name>
+   <description>
+       <![CDATA[
+Worker: BORIS KOGAN 9175660875<br/>Location:  <font class='unknown_location'>Unknown</font><br/>91 franklin avenue<br/>brooklyn, NY 11205<br/><u>Stop Info</u><br/>Timecard status: On Duty<br/>Arr: 05/10/17 09:58 AM EDT<br/>Dep: 05/10/17 12:32 PM EDT<br/>Dur: 02:34 hrs.<br/><br/><u>Travel Info</u><br/>Dur: 00:11 hrs.<br/><br/>Dist: 1.9 miles<br/>]]>
+   </description>
+   <styleUrl>#stop</styleUrl>
+   <Point>
+       <coordinates>-73.95827849714286,40.69615472809523</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[Stop at 05/10/17 12:44 PM EDT]]></name>
+   <description>
+       <![CDATA[
+Worker: BORIS KOGAN 9175660875<br/>Location:  <font class='unknown_location'>Unknown</font><br/>700 broadway<br/>brooklyn, NY 11206<br/><u>Stop Info</u><br/>Timecard status: On Duty<br/>Arr: 05/10/17 12:44 PM EDT<br/>Dep: 05/10/17 12:58 PM EDT<br/>Dur: 00:14 hrs.<br/><br/><u>Travel Info</u><br/>Dur: 00:11 hrs.<br/><br/>Dist: 1.0 miles<br/>]]>
+   </description>
+   <styleUrl>#stop</styleUrl>
+   <Point>
+       <coordinates>-73.94354897666666,40.70161984</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[Stop at 05/10/17 01:03 PM EDT]]></name>
+   <description>
+       <![CDATA[
+Worker: BORIS KOGAN 9175660875<br/>Location:  <font class='unknown_location'>Unknown</font><br/>65-67 havemeyer street<br/>brooklyn, NY 11211<br/><u>Stop Info</u><br/>Timecard status: On Duty<br/>Arr: 05/10/17 01:03 PM EDT<br/>Dep: 05/10/17 02:23 PM EDT<br/>Dur: 01:20 hrs.<br/><br/><u>Travel Info</u><br/>Dur: 00:06 hrs.<br/><br/>Dist: 1.1 miles<br/>]]>
+   </description>
+   <styleUrl>#stop</styleUrl>
+   <Point>
+       <coordinates>-73.95457645062501,40.714466680625</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[Stop at 05/10/17 02:33 PM EDT]]></name>
+   <description>
+       <![CDATA[
+Worker: BORIS KOGAN 9175660875<br/>Location:  <font class='unknown_location'>Unknown</font><br/>563 flushing avenue<br/>brooklyn, NY 11206<br/><u>Stop Info</u><br/>Timecard status: On Duty<br/>Arr: 05/10/17 02:33 PM EDT<br/>Dep: 05/10/17 03:13 PM EDT<br/>Dur: 00:39 hrs.<br/><br/><u>Travel Info</u><br/>Dur: 00:10 hrs.<br/><br/>Dist: 1.2 miles<br/>]]>
+   </description>
+   <styleUrl>#stop</styleUrl>
+   <Point>
+       <coordinates>-73.95244025,40.69949490625</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[Stop at 05/10/17 03:49 PM EDT]]></name>
+   <description>
+       <![CDATA[
+Worker: BORIS KOGAN 9175660875<br/>Location:  <font class='unknown_location'>Unknown</font><br/>330-338 ocean avenue<br/>brooklyn, NY 11226<br/><u>Stop Info</u><br/>Timecard status: On Duty<br/>Arr: 05/10/17 03:49 PM EDT<br/>Dep: 05/10/17 03:58 PM EDT<br/>Dur: 00:09 hrs.<br/><br/><u>Travel Info</u><br/>Dur: 00:36 hrs.<br/><br/>Dist: 3.6 miles<br/>]]>
+   </description>
+   <styleUrl>#stop</styleUrl>
+   <Point>
+       <coordinates>-73.96193664500001,40.654784680000006</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name><![CDATA[Stop at 05/10/17 04:19 PM EDT]]></name>
+   <description>
+       <![CDATA[
+Worker: BORIS KOGAN 9175660875<br/>Location:  <font class='unknown_location'>Unknown</font><br/>111 van sicklen street<br/>brooklyn, NY 11223<br/><u>Stop Info</u><br/>Timecard status: On Duty<br/>Arr: 05/10/17 04:19 PM EDT<br/>Dep: 05/10/17 04:43 PM EDT<br/>Dur: 00:24 hrs.<br/><br/><u>Travel Info</u><br/>Dur: 00:21 hrs.<br/><br/>Dist: 3.9 miles<br/>]]>
+   </description>
+   <styleUrl>#stop</styleUrl>
+   <Point>
+       <coordinates>-73.97429159999999,40.601750859999996</coordinates>
+   </Point>
+</Placemark>
+</Folder>
+<Folder>
+<name>Worker Actions</name>
+<open>1</open>
+<description>View worker actions</description><Placemark>
+   <name><![CDATA[End Shift]]></name>
+   <description>
+       <![CDATA[
+2950 avenue x<br/>brooklyn, NY 11235<br/><b>Worker: BORIS KOGAN 9175660875</b><br/>05/10/17 05:27 PM EDT]]>
+   </description>
+   <styleUrl>#EndShift</styleUrl>
+   <Point>
+       <coordinates>-73.9394235,40.593925</coordinates>
+   </Point>
+</Placemark>
+</Folder>
+</Document>
+</kml>
