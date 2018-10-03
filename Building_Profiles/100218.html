@@ -9,13 +9,14 @@
   <!-- Include Mapbox GL JS -->
   <script src="https://libs.cartocdn.com/mapbox-gl/v0.48.0-carto1/mapbox-gl.js"></script>
   <!-- Include Mapbox GL CSS -->
-  <link href=" " rel="stylesheet" />
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css' rel='stylesheet' />
   <link href="https://carto.com/developers/carto-vl/examples/maps/style.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
  
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  
  
   <style>
  
@@ -23,9 +24,9 @@
  
  
 aside.toolbox {
-  position: sticky;
-  top: 20px;
-  right: 20px;
+  position: relative;
+  left: 10px;
+  top: 10px;
   min-width: 335px;
   max-width: 335px;
   z-index: 2;
@@ -34,7 +35,7 @@ aside.toolbox {
 .box {
   background: #FFFFFF;
   z-index: 2;
-  <!-- border-radius: 10px; -->
+  border-radius: 5px;
   padding: 16px;
   margin: 0 0 24px;
   box-shadow: 0 0px 16px rgba(0, 0, 0, 0.24);
@@ -206,6 +207,9 @@ aside.toolbox {
   <p>Resize the browser window to see how it works.</p>
   <p>Hover over the dropdown button to open the dropdown menu.</p>
 </div> -->
+
+<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.min.js'></script>
+<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.css' type='text/css' />
  
   <div id="map"></div>
   <aside class="toolbox">
@@ -215,7 +219,7 @@ aside.toolbox {
         <header>
 <h1>12-Month Building Profiles</h1> 
       </header>
-        <div id="controls">
+        <div id="controls">		
           <div id="content"></div>
         </div>
       </section>
@@ -235,7 +239,13 @@ aside.toolbox {
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.9/d3.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.min.js'></script>
+  <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.css' type='text/css' />
   <script>
+  
+ mapboxgl.accessToken = 'pk.eyJ1IjoidGltb3RoeW1hcnRpbjc2IiwiYSI6ImFpMWoyWDQifQ.UFnI-Tun673bAdqSFpTKWA';
+
+  
  
   
   
@@ -251,7 +261,20 @@ aside.toolbox {
 const nav = new mapboxgl.NavigationControl({
       showCompass: false
     });
+	
     map.addControl(nav, 'top-left');
+		
+	map.addControl(new MapboxGeocoder({
+    accessToken: mapboxgl.accessToken,
+	bbox: [-74.2589, 40.4774, -73.7004, 40.9176],
+}));
+
+
+    // further limit results to the geographic bounds representing the region of
+    // New South Wales
+    
+
+
  
     // Define user
     carto.setDefaultAuth({
@@ -1254,7 +1277,7 @@ const WorkerFellViz = new carto.Viz(`
 	
 	
  
-    const BuildingsLayer  = new carto.Layer('BuildingsLayer', AllBuildingsSource, AllBuildingsViz);
+const BuildingsLayer  = new carto.Layer('BuildingsLayer', AllBuildingsSource, AllBuildingsViz);
 
     // Define interactivity
     const interactivity = new carto.Interactivity(BuildingsLayer);
