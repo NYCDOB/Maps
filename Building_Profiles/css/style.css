@@ -1,11 +1,10 @@
 body {margin:0;font-family: 'Open Sans', sans-serif;}
 
 
-
-
 .topnav {
   overflow: hidden;
   background-color: #333;
+  z-index: 999;
 }
 
 .topnav a {
