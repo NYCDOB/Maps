@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>12-Month Building Profiles</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <!-- Include CARTO VL JS -->
+  <script src="https://libs.cartocdn.com/carto-vl/v0.7.0/carto-vl.min.js"></script>
+  <!-- Include Mapbox GL JS -->
+  <script src="https://libs.cartocdn.com/mapbox-gl/v0.48.0-carto1/mapbox-gl.js"></script>
+  <!-- Include Mapbox GL CSS -->
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css' rel='stylesheet' />
+  <link href="https://carto.com/developers/carto-vl/examples/maps/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+ 
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  
+ 
+  <style>
+  
+  .box header h1 {
+  display: inline-block;
+  color: #2E3C43;
+  line-height: 22px;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+  width: calc(100% - 24px);
+}
+  
+  
+  
+ .box header h2 {
+  display: inline-block;
+  color: #3798FD;
+  line-height: 10px;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  margin: 0;
+  width: calc(100% - 24px);
+  height: 0px;
+} 
+  
+  
+  
+
+#map {
+  position: absolute;
+  height: calc(100% - 4.6em);
+  width: 100%;
+  z-index: 0;
+} 
+	  	  
+aside.toolbox {
+  position: relative;
+  left: 10px;
+  top: 10px;
+  min-width: 335px;
+  max-width: 335px;
+}
+ 
+.box {
+  background: #FFFFFF;
+  z-index: 2;
+  border-radius: 5px;
+  padding: 16px;
+  margin: 0 0 24px;
+  box-shadow: 0 0px 16px rgba(0, 0, 0, 0.24);
+}
+ 
+#controls li label {
+  font: 12px/16px;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+ 
+}
+#profileAttr {
+                background: #eaeaea;
+                padding: 2px;
+                outline: #FFFFFF;
+                outline-style: solid;
+                outline-width: thin;
+}
+#profileAttr:hover {
+                background-color: #f4f6f9;
+}
+#infoicon {
+                float: right;
+                opacity: 0.9;
+}
+.tooltip {
+                float: right;
+    position: relative;
+    display: inline-block;
+}
+ 
+.tooltip .tooltiptext {
+                font-family: Open Sans;
+                font-size: 10px;
+    visibility: hidden;
+    width: 120px;
+    background-color: #4d4d4d;
+    color: #ffffff;
+    text-align: left;
+    border-radius: 6px;
+    padding: 5px 10px 5px 10px;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 110%;
+}
+.tooltip .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #4d4d4d transparent transparent;
+}
+ 
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+.boldval {
+                font-weight: bold;
+                color: #3798FD;
+}
+.propInfo{
+                background-color: #c6e3f2;
+                padding: 2px 3px 2px 3px;
+               
+}
+.propInfo h7{
+                color: #474747;
+}
+  </style>
+ 
+  
+  
+</head>
+<body>
+<div class="content"> 
+<div class="topnav" id="myTopnav">
+  <a href="#home" class="" style="cursor: default;">DOB BUILDING PROFILES</a>
+  <a href="#home" class="" style="cursor: default;"><i><span class="" id="bldgSelection">All Buildings</i></span></a>
+  
+  
+  <div class="dropdown">
+    <button class="dropbtn">Accidents
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+    <a href="#" onclick="setAccidents()">CONSTRUCTION ACCIDENTS</a>
+	<a href="#" onclick="setWorkerFell()">WORKER FELL</a>
+	<a href="#" onclick="setMaterialFailure()">MATERIAL FAILURE</a>
+	<a href="#" onclick="setMechanical()">MECHANICAL EQUIPMENT</a>
+  </div>
+  </div>
+  
+  <div class="dropdown">
+    <button class="dropbtn">Violations
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+    <a href="#" onclick="setViolations()">TOTAL VIOLATIONS</a>
+	<a href="#" onclick="setECB()">ECB VIOLATIONS</a>
+	<a href="#" onclick="setSWO()">STOP WORK ORDERS</a>
+	<a href="#" onclick="setVacate()">VACATE ORDERS</a>
+  </div>
+  </div>
+  
+  <div class="dropdown">
+    <button class="dropbtn">Inspections
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+    <a href="#" onclick="setAllInspections()">TOTAL INSPECTIONS</a>
+	<a href="#" onclick="setBuildItBack()">BUILD IT BACK</a>
+	<a href="#" onclick="setBoilers()">BOILERS</a>	
+	<a href="#" onclick="setOBM()">BUILDING MARSHAL</a>
+	<a href="#" onclick="setConstructionDev()">CONSTRUCTION (DEV)</a>	
+	<a href="#" onclick="setConstructionEnf()">CONSTRUCTION (ENF)</a>
+	<a href="#" onclick="setCranes()">CRANES</a>
+	<a href="#" onclick="setElectricalDev()">ELECTRICAL (DEV)</a>
+	<a href="#" onclick="setElectricalEnf()">ELECTRICAL (ENF)</a>		
+	<a href="#" onclick="setElevators()">ELEVATORS</a>
+	<a href="#" onclick="setERT()">EMERGENCY RESPONSE</a>
+	<a href="#" onclick="setFacades()">FACADES</a>
+	<a href="#" onclick="setPlumbingDev()">PLUMBING (DEV)</a>
+	<a href="#" onclick="setPlumbingEnf()">PLUMBING (ENF)</a>
+	<a href="#" onclick="setQOL()">QUALITY OF LIFE</a>
+	<a href="#" onclick="setSustainability()">SUSTAINABILITY</a>
+  </div>
+  </div>  
+  
+  <div class="dropdown">
+    <button class="dropbtn">Complaints
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+    <a href="#" onclick="setComplaints()">TOTAL COMPLAINTS</a>
+	<a href="#" onclick="setIllegalConversion()">ILLEGAL CONVERSION</a>
+	<a href="#" onclick="setWWOP()">WORK WITHOUT PERMIT</a>
+	<a href="#" onclick="setTenantHarassment()">TENANT HARASSMENT</a>
+  </div>
+  </div>
+  
+  <div class="dropdown">
+    <button class="dropbtn">Permits
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+    <a href="#" onclick="setTotalPermits()">TOTAL PERMITS</a>
+    <a href="#" onclick="setBISPermits()">BIS PERMITS</a>
+    <a href="#" onclick="setDOBNOWPermits()">DOB NOW PERMITS</a>
+	<a href="#" onclick="setNewBuildings()">NEW BUILDINGS</a>
+  </div>
+  </div>
+ 
+  <div class="dropdown">
+    <button class="dropbtn">All Buildings
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+    <a href="#" onclick="setAllBuildings()">ALL BUILDINGS</a>	
+	<a href="#" onclick="setTotalPermits()">TOTAL PERMITS</a>
+	<a href="#" onclick="setComplaints()">TOTAL COMPLAINTS</a>	
+	<a href="#" onclick="setTotalInspections()">TOTAL INSPECTIONS</a>
+	<a href="#" onclick="setViolations()">TOTAL VIOLATIONS</a>
+	<a href="#" onclick="setAccidents()">CONSTRUCTION ACCIDENTS</a>	
+  </div>
+  </div>
+  
+  
+  
+  
+  
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+ 
+<!-- <div style="padding-left:16px">
+  <h2>Responsive Topnav with Dropdown</h2>
+  <p>Resize the browser window to see how it works.</p>
+  <p>Hover over the dropdown button to open the dropdown menu.</p>
+</div> -->
+
+<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.min.js'></script>
+<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.css' type='text/css' />
+ 
+  <div id="map"></div>
+ </div> 
+  <aside class="toolbox">
+    <div class="box">
+<section>
+ 
+        <header>
+<h2>Click on buildings for profile information</h2> 
+      </header>
+        <div id="controls">		
+          <div id="content"></div>
+        </div>
+      </section>
+ 
+ 
+      <section>         
+      </section>
+      <footer class="js-footer"></footer>
+    </div>
+  </aside>
+  <div id="loader">
+    <div class="CDB-LoaderIcon CDB-LoaderIcon--big">
+      <svg class="CDB-LoaderIcon-spinner" viewBox="0 0 50 50">
+        <circle class="CDB-LoaderIcon-path" cx="25" cy="25" r="20" fill="none"></circle>
+      </svg>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.9/d3.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.min.js'></script>
+  <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.css' type='text/css' />
+  <script>
+  
+mapboxgl.accessToken = 'pk.eyJ1IjoidGltb3RoeW1hcnRpbjc2IiwiYSI6ImFpMWoyWDQifQ.UFnI-Tun673bAdqSFpTKWA';
+
+const map = new mapboxgl.Map({
+      container: 'map',
+      style: 'https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json',
+      center: [-73.946735,40.726836],
+      zoom: 13,
+      scrollZoom: true,
+      dragRotate: false,
+      touchZoomRotate: false,
+    });
+	
+var geocoder = new MapboxGeocoder({
+    accessToken: mapboxgl.accessToken,
+	bbox: [-74.2589, 40.4774, -73.7004, 40.9176],
+	
+	filter: function (item) {
+        return item.context.map(function (i) {
+            return (i.id.split('.').shift() === 'region' && i.text === 'New York');
+        }).reduce(function (acc, cur) {
+            return acc || cur;
+        });
+    }	
+});	
+	
+	
+map.addControl(geocoder);
+
+map.on('load', function() {
+    map.addSource('single-point', {
+        "type": "geojson",
+        "data": {
+            "type": "FeatureCollection",
+            "features": []
+        }
+    });
+
+    map.addLayer({
+        "id": "point",
+        "source": "single-point",
+        "type": "circle",
+        "paint": {
+            "circle-radius": 10,
+            "circle-color": "#BF0C2B"
+        }
+    });
+
+    // Listen for the `result` event from the MapboxGeocoder that is triggered when a user
+    // makes a selection and add a symbol that matches the result.
+    geocoder.on('result', function(ev) {
+        map.getSource('single-point').setData(ev.result.geometry);
+    });
+});
+
+
+const nav = new mapboxgl.NavigationControl({
+      showCompass: false
+    });
+	
+map.addControl(nav, 'bottom-left');	
+	
+
+ 
+    // Define user
+    carto.setDefaultAuth({
+      user: 'timothymartin76',
+      apiKey: 'default_public'
+    });
+	
+// Define sources
+const AllBuildingsSource = new carto.source.SQL(`
+      SELECT *
+        FROM merge_footprints
+    `);
+const BISPermitsSource = new carto.source.SQL(`
+      SELECT *
+        FROM merge_footprints
+        WHERE bis_tt_ > 0
+    `);
+const DOBNOWPermitsSource = new carto.source.SQL(`
+      SELECT *
+        FROM merge_footprints
+        WHERE dobnow_ > 0
+    `);
+const NewBuildingsSource = new carto.source.SQL(`
+      SELECT *
+        FROM merge_footprints
+        WHERE bis_p_n > 0
+    `);
+const ComplaintsSource = new carto.source.SQL(`
+      SELECT *
+        FROM merge_footprints
+        WHERE ttl_cmp > 0
+    `);
+const WWOPSource = new carto.source.SQL(`
+      SELECT *
+        FROM merge_footprints
+        WHERE wwop > 0
+    `);
+const TenantHarassmentSource = new carto.source.SQL(`
+      SELECT *
+        FROM merge_footprints
+        WHERE tnnt_hr > 0
+    `);
+const ViolationsSource = new carto.source.SQL(`
+      SELECT *
+        FROM merge_footprints
+        WHERE ttl_vlt > 0
+    `);
+const SWOSource = new carto.source.SQL(`
+      SELECT *
+        FROM merge_footprints
+        WHERE swo > 0
+    `);
+const VacateSource = new carto.source.SQL(`
+      SELECT *
+        FROM merge_footprints
+        WHERE vacate > 0
+    `);
+const AccidentsSource = new carto.source.SQL(`
+      SELECT *
+        FROM merge_footprints
+        WHERE ttl_ccd > 0
+    `);
+	
+
+
+	
+const TotalPermitsSource = new carto.source.SQL(`
+      SELECT *
+        FROM merge_footprints
+        WHERE ttl_prm > 0
+    `);
+	
+	
+const IllegalConversionSource = new carto.source.SQL(`
+      SELECT *
+        FROM merge_footprints
+        WHERE illgl_c > 0
+    `);	
+
+	
+const TotalInspectionsSource = new carto.source.SQL(`
+      SELECT *
+        FROM merge_footprints
+        WHERE ttl_nsp > 0
+    `);		
+	
+	
+const BuildItBackSource = new carto.source.SQL(`
+      SELECT *
+        FROM merge_footprints
+        WHERE bib > 0
+    `);		
+
+const BoilersSource = new carto.source.SQL(`
+      SELECT *
+        FROM merge_footprints
+        WHERE boilers > 0
+    `);		
+
+const OBMSource = new carto.source.SQL(`
+      SELECT *
+        FROM merge_footprints
+        WHERE bldng_m > 0
+    `);		
+			
+	
+const ConstructionDevSource = new carto.source.SQL(`
+      SELECT *
+        FROM merge_footprints
+        WHERE cnstrcd > 0
+    `);		
+
+const ConstructionEnfSource = new carto.source.SQL(`
+      SELECT *
+        FROM merge_footprints
+        WHERE cnstrce > 0
+    `);			
+	
+const CranesSource = new carto.source.SQL(`
+      SELECT *
+        FROM merge_footprints
+        WHERE cranes > 0
+    `);			
+	
+const ElectricalDevSource = new carto.source.SQL(`
+      SELECT *
+        FROM merge_footprints
+        WHERE elctrcd > 0
+    `);
+	
+	
+const ElectricalEnfSource = new carto.source.SQL(`
+      SELECT *
+        FROM merge_footprints
+        WHERE elctrce > 0
+    `);	
+	
+const ElevatorsSource = new carto.source.SQL(`
+      SELECT *
+        FROM merge_footprints
+        WHERE elevtrs > 0
+    `);		
+
+const ERTSource = new carto.source.SQL(`
+      SELECT *
+        FROM merge_footprints
+        WHERE ert > 0
+    `);		
+
+const FacadesSource = new carto.source.SQL(`
+      SELECT *
+        FROM merge_footprints
+        WHERE facades > 0
+    `);		
+
+const PlumbingDevSource = new carto.source.SQL(`
+      SELECT *
+        FROM merge_footprints
+        WHERE plmbngd > 0
+    `);		
+	
+const PlumbingEnfSource = new carto.source.SQL(`
+      SELECT *
+        FROM merge_footprints
+        WHERE plmbnge > 0
+    `);		
+	
+const QOLSource = new carto.source.SQL(`
+      SELECT *
+        FROM merge_footprints
+        WHERE qol > 0
+    `);			
+	
+const SustainabilitySource = new carto.source.SQL(`
+      SELECT *
+        FROM merge_footprints
+        WHERE sstnblt > 0
+    `);		
+		
+const ECBSource = new carto.source.SQL(`
+      SELECT *
+        FROM merge_footprints
+        WHERE ecb > 0
+    `);		
+
+const MaterialFailureSource = new carto.source.SQL(`
+      SELECT *
+        FROM merge_footprints
+        WHERE mtrl_fl > 0
+    `);		
+
+	
+const MechanicalSource = new carto.source.SQL(`
+      SELECT *
+        FROM merge_footprints
+        WHERE mch_c_e > 0
+    `);			
+	
+const WorkerFellSource = new carto.source.SQL(`
+      SELECT *
+        FROM merge_footprints
+        WHERE wrkr_fl > 0
+    `);			
+	
+
+
+    // Define layer and variables for interactivity
+    <!-- const source = new carto.source.Dataset('merge_footprints') -->;
+    const AllBuildingsViz = new carto.Viz(`
+      @address: $address,
+                  @borough: $borough,
+                  @bin: $bin,
+                  @bis_prf: $bis_prf,
+                  @cnstrc_: $cnstrc_,
+                  @stretvw: $stretvw,                  
+                  @ttl_cmp: $ttl_cmp,                  
+                  @ttl_vlt: $ttl_vlt,                
+                  @ttl_ccd: $ttl_ccd,
+				  @ttl_prm: $ttl_prm,
+				  @ttl_nsp: $ttl_nsp,
+                  color: #12eded,
+                  strokeWidth: 0.0,
+    `);
+const BISPermitsViz = new carto.Viz(`
+      @address: $address,
+                  @borough: $borough,
+                  @bin: $bin,
+                  @bis_prf: $bis_prf,
+                  @cnstrc_: $cnstrc_,
+                  @stretvw: $stretvw,                 
+                  @ttl_cmp: $ttl_cmp,                  
+                  @ttl_vlt: $ttl_vlt,              
+                  @ttl_ccd: $ttl_ccd,
+				  @ttl_prm: $ttl_prm,
+				  @ttl_nsp: $ttl_nsp,
+                  color: #74c476,
+                  strokeWidth: 0.0,
+    `);
+const DOBNOWPermitsViz = new carto.Viz(`
+      @address: $address,
+                  @borough: $borough,
+                  @bin: $bin,
+                  @bis_prf: $bis_prf,
+                  @cnstrc_: $cnstrc_,
+                  @stretvw: $stretvw,                 
+                  @ttl_cmp: $ttl_cmp,                
+                  @ttl_vlt: $ttl_vlt,                
+                  @ttl_ccd: $ttl_ccd,
+				  @ttl_prm: $ttl_prm,
+				  @ttl_nsp: $ttl_nsp,
+                  color: #74c476,
+                  strokeWidth: 0.0,
+    `);
+const NewBuildingsViz = new carto.Viz(`
+      @address: $address,
+                  @borough: $borough,
+                  @bin: $bin,
+                  @bis_prf: $bis_prf,
+                  @cnstrc_: $cnstrc_,
+                  @stretvw: $stretvw,                 
+                  @ttl_cmp: $ttl_cmp,                
+                  @ttl_vlt: $ttl_vlt,                  
+                  @ttl_ccd: $ttl_ccd,
+				  @ttl_prm: $ttl_prm,
+				  @ttl_nsp: $ttl_nsp,
+                  color: #74c476,
+                  strokeWidth: 0.0,
+    `);
+const ComplaintsViz = new carto.Viz(`
+      @address: $address,
+                  @borough: $borough,
+                  @bin: $bin,
+                  @bis_prf: $bis_prf,
+                  @cnstrc_: $cnstrc_,
+                  @stretvw: $stretvw,                  
+                  @ttl_cmp: $ttl_cmp,                 
+                  @ttl_vlt: $ttl_vlt,                
+                  @ttl_ccd: $ttl_ccd,
+				  @ttl_prm: $ttl_prm,
+				  @ttl_nsp: $ttl_nsp,
+                  color: ramp(linear($ttl_cmp,1,10),[#a63603, #e6550d, #fd8d3c, #fdbe85, #feedde])
+                  strokeWidth: 0.0,
+    `);
+const WWOPViz = new carto.Viz(`
+      @address: $address,
+                  @borough: $borough,
+                  @bin: $bin,
+                  @bis_prf: $bis_prf,
+                  @cnstrc_: $cnstrc_,
+                  @stretvw: $stretvw,                 
+                  @ttl_cmp: $ttl_cmp,                
+                  @ttl_vlt: $ttl_vlt,             
+                  @ttl_ccd: $ttl_ccd,
+				  @ttl_prm: $ttl_prm,
+				  @ttl_nsp: $ttl_nsp,
+                  color: #fd8d3c,
+                  strokeWidth: 0.0,
+    `);
+const TenantHarassmentViz = new carto.Viz(`
+      @address: $address,
+                  @borough: $borough,
+                  @bin: $bin,
+                  @bis_prf: $bis_prf,
+                  @cnstrc_: $cnstrc_,
+                  @stretvw: $stretvw,                  
+                  @ttl_cmp: $ttl_cmp,               
+                  @ttl_vlt: $ttl_vlt,             
+                  @ttl_ccd: $ttl_ccd,
+				  @ttl_prm: $ttl_prm,
+				  @ttl_nsp: $ttl_nsp,
+                  color: #fd8d3c,
+                  strokeWidth: 0.0,
+    `);
+const ViolationsViz = new carto.Viz(`
+      @address: $address,
+                  @borough: $borough,
+                  @bin: $bin,
+                  @bis_prf: $bis_prf,
+                  @cnstrc_: $cnstrc_,
+                  @stretvw: $stretvw,                  
+                  @ttl_cmp: $ttl_cmp,               
+                  @ttl_vlt: $ttl_vlt,                
+                  @ttl_ccd: $ttl_ccd,
+				  @ttl_prm: $ttl_prm,
+				  @ttl_nsp: $ttl_nsp,
+                  color: ramp(linear($ttl_vlt,1,5),[#a50f15, #de2d26, #fb6a4a, #fcae91, #fee5d9])
+                  strokeWidth: 0.0,
+    `);
+const SWOViz = new carto.Viz(`
+      @address: $address,
+                  @borough: $borough,
+                  @bin: $bin,
+                  @bis_prf: $bis_prf,
+                  @cnstrc_: $cnstrc_,
+                  @stretvw: $stretvw,                               
+                  @ttl_cmp: $ttl_cmp,                
+                  @ttl_vlt: $ttl_vlt,                 
+                  @ttl_ccd: $ttl_ccd,
+				  @ttl_prm: $ttl_prm,
+				  @ttl_nsp: $ttl_nsp,
+                  color: #de2d26,
+                  strokeWidth: 0.0,
+    `);
+const VacateViz = new carto.Viz(`
+      @address: $address,
+                  @borough: $borough,
+                  @bin: $bin,
+                  @bis_prf: $bis_prf,
+                  @cnstrc_: $cnstrc_,
+                  @stretvw: $stretvw,                
+                  @ttl_cmp: $ttl_cmp,                 
+                  @ttl_vlt: $ttl_vlt,                 
+                  @ttl_ccd: $ttl_ccd,
+				  @ttl_prm: $ttl_prm,
+				  @ttl_nsp: $ttl_nsp,
+                  color: #de2d26,
+                  strokeWidth: 0.0,
+    `);
+const AccidentsViz = new carto.Viz(`
+      @address: $address,
+                  @borough: $borough,
+                  @bin: $bin,
+                  @bis_prf: $bis_prf,
+                  @cnstrc_: $cnstrc_,
+                  @stretvw: $stretvw,                
+                  @ttl_cmp: $ttl_cmp,              
+                  @ttl_vlt: $ttl_vlt,               
+                  @ttl_ccd: $ttl_ccd,
+				  @ttl_prm: $ttl_prm,
+				  @ttl_nsp: $ttl_nsp,
+                  color: ramp(linear($ttl_ccd,1,7),[#756bb1, #9e9ac8, #cbc9e2, #f2f0f7])
+                  strokeWidth: 0.0,
+    `);
+	
+
+const TotalPermitsViz = new carto.Viz(`
+      @address: $address,
+                  @borough: $borough,
+                  @bin: $bin,
+                  @bis_prf: $bis_prf,
+                  @cnstrc_: $cnstrc_,
+                  @stretvw: $stretvw,               
+                  @ttl_cmp: $ttl_cmp,               
+                  @ttl_vlt: $ttl_vlt,             
+                  @ttl_ccd: $ttl_ccd,
+				  @ttl_prm: $ttl_prm,
+				  @ttl_nsp: $ttl_nsp,
+                  color: ramp(linear($ttl_prm,1,20),[#31a354, #74c476, #bae4b3, #edf8e9])
+                  strokeWidth: 0.0,
+    `);
+
+const TotalInspectionsViz = new carto.Viz(`
+      @address: $address,
+                  @borough: $borough,
+                  @bin: $bin,
+                  @bis_prf: $bis_prf,
+                  @cnstrc_: $cnstrc_,
+                  @stretvw: $stretvw,                
+                  @ttl_cmp: $ttl_cmp,            
+                  @ttl_vlt: $ttl_vlt,               
+                  @ttl_ccd: $ttl_ccd,
+				  @ttl_prm: $ttl_prm,
+				  @ttl_nsp: $ttl_nsp,
+                  color: ramp(linear($ttl_nsp,1,30),[#08519c, #3182bd, #6baed6, #bdd7e7, #eff3ff])
+                  strokeWidth: 0.0,
+    `);
+
+const IllegalConversionViz = new carto.Viz(`
+      @address: $address,
+                  @borough: $borough,
+                  @bin: $bin,
+                  @bis_prf: $bis_prf,
+                  @cnstrc_: $cnstrc_,
+                  @stretvw: $stretvw,                 
+                  @ttl_cmp: $ttl_cmp,               
+                  @ttl_vlt: $ttl_vlt,               
+                  @ttl_ccd: $ttl_ccd,
+				  @ttl_prm: $ttl_prm,
+				  @ttl_nsp: $ttl_nsp,
+                  color: #fd8d3c,
+                  strokeWidth: 0.0,
+    `);
+
+const BuildItBackViz = new carto.Viz(`
+      @address: $address,
+                  @borough: $borough,
+                  @bin: $bin,
+                  @bis_prf: $bis_prf,
+                  @cnstrc_: $cnstrc_,
+                  @stretvw: $stretvw,                
+                  @ttl_cmp: $ttl_cmp,                
+                  @ttl_vlt: $ttl_vlt,               
+                  @ttl_ccd: $ttl_ccd,
+				  @ttl_prm: $ttl_prm,
+				  @ttl_nsp: $ttl_nsp,
+                  color: #6baed6,
+                  strokeWidth: 0.0,
+    `);
+
+const BoilersViz = new carto.Viz(`
+      @address: $address,
+                  @borough: $borough,
+                  @bin: $bin,
+                  @bis_prf: $bis_prf,
+                  @cnstrc_: $cnstrc_,
+                  @stretvw: $stretvw,                
+                  @ttl_cmp: $ttl_cmp,                 
+                  @ttl_vlt: $ttl_vlt,             
+                  @ttl_ccd: $ttl_ccd,
+				  @ttl_prm: $ttl_prm,
+				  @ttl_nsp: $ttl_nsp,
+                  color: #6baed6,
+                  strokeWidth: 0.0,
+    `);
+
+const OBMViz = new carto.Viz(`
+      @address: $address,
+                  @borough: $borough,
+                  @bin: $bin,
+                  @bis_prf: $bis_prf,
+                  @cnstrc_: $cnstrc_,
+                  @stretvw: $stretvw,                
+                  @ttl_cmp: $ttl_cmp,               
+                  @ttl_vlt: $ttl_vlt,            
+                  @ttl_ccd: $ttl_ccd,
+				  @ttl_prm: $ttl_prm,
+				  @ttl_nsp: $ttl_nsp,
+                  color: #6baed6,
+                  strokeWidth: 0.0,
+    `);
+
+const ConstructionDevViz = new carto.Viz(`
+      @address: $address,
+                  @borough: $borough,
+                  @bin: $bin,
+                  @bis_prf: $bis_prf,
+                  @cnstrc_: $cnstrc_,
+                  @stretvw: $stretvw,              
+                  @ttl_cmp: $ttl_cmp,             
+                  @ttl_vlt: $ttl_vlt,             
+                  @ttl_ccd: $ttl_ccd,
+				  @ttl_prm: $ttl_prm,
+				  @ttl_nsp: $ttl_nsp,
+                  color: #6baed6,
+                  strokeWidth: 0.0,
+    `);
+
+const ConstructionEnfViz = new carto.Viz(`
+      @address: $address,
+                  @borough: $borough,
+                  @bin: $bin,
+                  @bis_prf: $bis_prf,
+                  @cnstrc_: $cnstrc_,
+                  @stretvw: $stretvw,              
+                  @ttl_cmp: $ttl_cmp,              
+                  @ttl_vlt: $ttl_vlt,          
+                  @ttl_ccd: $ttl_ccd,
+				  @ttl_prm: $ttl_prm,
+				  @ttl_nsp: $ttl_nsp,
+                  color: #6baed6,
+                  strokeWidth: 0.0,
+    `);
+
+const CranesViz = new carto.Viz(`
+      @address: $address,
+                  @borough: $borough,
+                  @bin: $bin,
+                  @bis_prf: $bis_prf,
+                  @cnstrc_: $cnstrc_,
+                  @stretvw: $stretvw,                
+                  @ttl_cmp: $ttl_cmp,             
+                  @ttl_vlt: $ttl_vlt,            
+                  @ttl_ccd: $ttl_ccd,
+				  @ttl_prm: $ttl_prm,
+				  @ttl_nsp: $ttl_nsp,
+                  color: #6baed6,
+                  strokeWidth: 0.0,
+    `);
+
+const ElectricalDevViz = new carto.Viz(`
+      @address: $address,
+                  @borough: $borough,
+                  @bin: $bin,
+                  @bis_prf: $bis_prf,
+                  @cnstrc_: $cnstrc_,
+                  @stretvw: $stretvw,             
+                  @ttl_cmp: $ttl_cmp,             
+                  @ttl_vlt: $ttl_vlt,              
+                  @ttl_ccd: $ttl_ccd,
+				  @ttl_prm: $ttl_prm,
+				  @ttl_nsp: $ttl_nsp,
+                  color: #6baed6,
+                  strokeWidth: 0.0,
+    `);
+
+const ElectricalEnfViz = new carto.Viz(`
+      @address: $address,
+                  @borough: $borough,
+                  @bin: $bin,
+                  @bis_prf: $bis_prf,
+                  @cnstrc_: $cnstrc_,
+                  @stretvw: $stretvw,              
+                  @ttl_cmp: $ttl_cmp,            
+                  @ttl_vlt: $ttl_vlt,            
+                  @ttl_ccd: $ttl_ccd,
+				  @ttl_prm: $ttl_prm,
+				  @ttl_nsp: $ttl_nsp,
+                  color: #6baed6,
+                  strokeWidth: 0.0,
+    `);
+
+const ElevatorsViz = new carto.Viz(`
+      @address: $address,
+                  @borough: $borough,
+                  @bin: $bin,
+                  @bis_prf: $bis_prf,
+                  @cnstrc_: $cnstrc_,
+                  @stretvw: $stretvw,             
+                  @ttl_cmp: $ttl_cmp,            
+                  @ttl_vlt: $ttl_vlt,            
+                  @ttl_ccd: $ttl_ccd,
+				  @ttl_prm: $ttl_prm,
+				  @ttl_nsp: $ttl_nsp,
+                  color: #6baed6,
+                  strokeWidth: 0.0,
+    `);
+
+const ERTViz = new carto.Viz(`
+      @address: $address,
+                  @borough: $borough,
+                  @bin: $bin,
+                  @bis_prf: $bis_prf,
+                  @cnstrc_: $cnstrc_,
+                  @stretvw: $stretvw,              
+                  @ttl_cmp: $ttl_cmp,             
+                  @ttl_vlt: $ttl_vlt,            
+                  @ttl_ccd: $ttl_ccd,
+				  @ttl_prm: $ttl_prm,
+				  @ttl_nsp: $ttl_nsp,
+                  color: #6baed6,
+                  strokeWidth: 0.0,
+    `);
+
+const FacadesViz = new carto.Viz(`
+      @address: $address,
+                  @borough: $borough,
+                  @bin: $bin,
+                  @bis_prf: $bis_prf,
+                  @cnstrc_: $cnstrc_,
+                  @stretvw: $stretvw,              
+                  @ttl_cmp: $ttl_cmp,             
+                  @ttl_vlt: $ttl_vlt,              
+                  @ttl_ccd: $ttl_ccd,
+				  @ttl_prm: $ttl_prm,
+				  @ttl_nsp: $ttl_nsp,
+                  color: #6baed6,
+                  strokeWidth: 0.0,
+    `);
+
+const PlumbingDevViz = new carto.Viz(`
+      @address: $address,
+                  @borough: $borough,
+                  @bin: $bin,
+                  @bis_prf: $bis_prf,
+                  @cnstrc_: $cnstrc_,
+                  @stretvw: $stretvw,               
+                  @ttl_cmp: $ttl_cmp,            
+                  @ttl_vlt: $ttl_vlt,              
+                  @ttl_ccd: $ttl_ccd,
+				  @ttl_prm: $ttl_prm,
+				  @ttl_nsp: $ttl_nsp,
+                  color: #6baed6,
+                  strokeWidth: 0.0,
+    `);
+
+const PlumbingEnfViz = new carto.Viz(`
+      @address: $address,
+                  @borough: $borough,
+                  @bin: $bin,
+                  @bis_prf: $bis_prf,
+                  @cnstrc_: $cnstrc_,
+                  @stretvw: $stretvw,               
+                  @ttl_cmp: $ttl_cmp,              
+                  @ttl_vlt: $ttl_vlt,             
+                  @ttl_ccd: $ttl_ccd,
+				  @ttl_prm: $ttl_prm,
+				  @ttl_nsp: $ttl_nsp,
+                  color: #6baed6,
+                  strokeWidth: 0.0,
+    `);
+
+const QOLViz = new carto.Viz(`
+      @address: $address,
+                  @borough: $borough,
+                  @bin: $bin,
+                  @bis_prf: $bis_prf,
+                  @cnstrc_: $cnstrc_,
+                  @stretvw: $stretvw,                
+                  @ttl_cmp: $ttl_cmp,              
+                  @ttl_vlt: $ttl_vlt,               
+                  @ttl_ccd: $ttl_ccd,
+				  @ttl_prm: $ttl_prm,
+				  @ttl_nsp: $ttl_nsp,
+                  color: #6baed6,
+                  strokeWidth: 0.0,
+    `);
+
+const SustainabilityViz = new carto.Viz(`
+      @address: $address,
+                  @borough: $borough,
+                  @bin: $bin,
+                  @bis_prf: $bis_prf,
+                  @cnstrc_: $cnstrc_,
+                  @stretvw: $stretvw,              
+                  @ttl_cmp: $ttl_cmp,              
+                  @ttl_vlt: $ttl_vlt,             
+                  @ttl_ccd: $ttl_ccd,
+				  @ttl_prm: $ttl_prm,
+				  @ttl_nsp: $ttl_nsp,
+                  color: #6baed6,
+                  strokeWidth: 0.0,
+    `);
+
+const ECBViz = new carto.Viz(`
+      @address: $address,
+                  @borough: $borough,
+                  @bin: $bin,
+                  @bis_prf: $bis_prf,
+                  @cnstrc_: $cnstrc_,
+                  @stretvw: $stretvw,                
+                  @ttl_cmp: $ttl_cmp,             
+                  @ttl_vlt: $ttl_vlt,               
+                  @ttl_ccd: $ttl_ccd,
+				  @ttl_prm: $ttl_prm,
+				  @ttl_nsp: $ttl_nsp,
+                  color: #de2d26,
+                  strokeWidth: 0.0,
+    `);
+
+const MaterialFailureViz = new carto.Viz(`
+      @address: $address,
+                  @borough: $borough,
+                  @bin: $bin,
+                  @bis_prf: $bis_prf,
+                  @cnstrc_: $cnstrc_,
+                  @stretvw: $stretvw,                
+                  @ttl_cmp: $ttl_cmp,              
+                  @ttl_vlt: $ttl_vlt,            
+                  @ttl_ccd: $ttl_ccd,
+				  @ttl_prm: $ttl_prm,
+				  @ttl_nsp: $ttl_nsp,
+                  color: #9e9ac8,
+                  strokeWidth: 0.0,
+    `);
+const MechanicalViz = new carto.Viz(`
+      @address: $address,
+                  @borough: $borough,
+                  @bin: $bin,
+                  @bis_prf: $bis_prf,
+                  @cnstrc_: $cnstrc_,
+                  @stretvw: $stretvw,               
+                  @ttl_cmp: $ttl_cmp,            
+                  @ttl_vlt: $ttl_vlt,             
+                  @ttl_ccd: $ttl_ccd,
+				  @ttl_prm: $ttl_prm,
+				  @ttl_nsp: $ttl_nsp,
+                  color: #9e9ac8,
+                  strokeWidth: 0.0,
+    `);
+
+const WorkerFellViz = new carto.Viz(`
+      @address: $address,
+                  @borough: $borough,
+                  @bin: $bin,
+                  @bis_prf: $bis_prf,
+                  @cnstrc_: $cnstrc_,
+                  @stretvw: $stretvw,              
+                  @ttl_cmp: $ttl_cmp,            
+                  @ttl_vlt: $ttl_vlt,               
+                  @ttl_ccd: $ttl_ccd,
+				  @ttl_prm: $ttl_prm,
+				  @ttl_nsp: $ttl_nsp,
+                  color: #9e9ac8,
+                  strokeWidth: 0.0,
+    `);	
+	
+	
+	
+
+ 
+const BuildingsLayer  = new carto.Layer('BuildingsLayer', AllBuildingsSource, AllBuildingsViz);
+
+    // Define interactivity
+    const interactivity = new carto.Interactivity(BuildingsLayer);
+    interactivity.on('featureClick', updateNeighbourhood);
+	
+
+const delay = 50;
+    let clickedFeatureId = null;
+    interactivity.on('featureEnter', event => {
+      event.features.forEach(feature => {
+        if (feature.id !== clickedFeatureId) {
+          feature.color.blendTo('opacity(Yellow, 0.5)', delay)
+          feature.strokeWidth.blendTo('4', delay);
+          feature.strokeColor.blendTo('opacity(Yellow, 0.8)', delay);
+        }
+      });
+    });
+    interactivity.on('featureLeave', event => {
+      event.features.forEach(feature => {
+        if (feature.id !== clickedFeatureId) {
+          feature.color.reset(delay);
+          feature.strokeWidth.reset(delay);
+          feature.strokeColor.reset(delay);
+        }
+      });
+    });
+    interactivity.on('featureClick', event => {
+      if (event.features.length) {
+        const feature = event.features[0];
+        clickedFeatureId = feature.id;
+        feature.color.blendTo('opacity(LimeGreen, 0.5)', delay)
+        feature.strokeWidth.blendTo('7', delay);
+        feature.strokeColor.blendTo('opacity(LimeGreen, 0.8)', delay);
+      }
+    });
+    interactivity.on('featureClickOut', event => {
+      if (event.features.length) {
+        const feature = event.features[0];
+        clickedFeatureId = '';
+        feature.color.reset(delay);
+        feature.strokeWidth.reset(delay);
+        feature.strokeColor.reset(delay);
+      }
+    });
+ 
+    BuildingsLayer.addTo(map, 'watername_ocean');            
+    BuildingsLayer.on('loaded', hideLoader);
+	
+ 
+function setAllBuildings() {
+      BuildingsLayer.update(AllBuildingsSource, AllBuildingsViz);
+                  d3.select("#bldgSelection").html("All Buildings");
+    }
+function setBISPermits() {
+      BuildingsLayer.update(BISPermitsSource, BISPermitsViz);
+                  d3.select("#bldgSelection").html("BIS Permits");
+    }
+function setDOBNOWPermits() {
+      BuildingsLayer.update(DOBNOWPermitsSource, DOBNOWPermitsViz);
+                  d3.select("#bldgSelection").html("DOB NOW Permits");
+    }
+function setNewBuildings() {
+      BuildingsLayer.update(NewBuildingsSource, NewBuildingsViz);
+                  d3.select("#bldgSelection").html("New Buildings");
+    }
+function setComplaints() {
+      BuildingsLayer.update(ComplaintsSource, ComplaintsViz);
+                  d3.select("#bldgSelection").html("Total Complaints");
+    }
+function setWWOP() {
+      BuildingsLayer.update(WWOPSource, WWOPViz);
+                  d3.select("#bldgSelection").html("Work Without a Permit");
+    }
+function setTenantHarassment() {
+      BuildingsLayer.update(TenantHarassmentSource, TenantHarassmentViz);
+                  d3.select("#bldgSelection").html("Tenant Harassment");
+    }
+function setViolations() {
+      BuildingsLayer.update(ViolationsSource, ViolationsViz);
+                  d3.select("#bldgSelection").html("Total Violations");
+    }
+function setSWO() {
+      BuildingsLayer.update(SWOSource, SWOViz);
+                  d3.select("#bldgSelection").html("Stop Work Orders");
+    }
+function setVacate() {
+      BuildingsLayer.update(VacateSource, VacateViz);
+                  d3.select("#bldgSelection").html("Vacate Orders");
+    }
+function setAccidents() {
+      BuildingsLayer.update(AccidentsSource, AccidentsViz);
+                  d3.select("#bldgSelection").html("Construction Accidents");
+    }
+function setAllInspections() {
+      BuildingsLayer.update(TotalInspectionsSource, TotalInspectionsViz);
+                  d3.select("#bldgSelection").html("Total Inspections");
+    }
+	
+	
+function setTotalPermits() {
+      BuildingsLayer.update(TotalPermitsSource, TotalPermitsViz);
+                  d3.select("#bldgSelection").html("Total Permits");
+    }	
+	
+function setTotalInspections() {
+      BuildingsLayer.update(TotalInspectionsSource, TotalInspectionsViz);
+                  d3.select("#bldgSelection").html("Total Inspections");
+    }	
+		
+function setIllegalConversion() {
+      BuildingsLayer.update(IllegalConversionSource, IllegalConversionViz);
+                  d3.select("#bldgSelection").html("Illegal Conversions");
+    }
+
+function setBuildItBack() {
+      BuildingsLayer.update(BuildItBackSource, BuildItBackViz);
+                  d3.select("#bldgSelection").html("Build It Back");
+    }
+
+function setBoilers() {
+      BuildingsLayer.update(BoilersSource, BoilersViz);
+                  d3.select("#bldgSelection").html("Boilers");
+    }
+
+function setOBM() {
+      BuildingsLayer.update(OBMSource, OBMViz);
+                  d3.select("#bldgSelection").html("Building Marshal");
+    }
+
+function setConstructionDev() {
+      BuildingsLayer.update(ConstructionDevSource, ConstructionDevViz);
+                  d3.select("#bldgSelection").html("Construction (Dev)");
+    }
+
+function setConstructionEnf() {
+      BuildingsLayer.update(ConstructionEnfSource, ConstructionEnfViz);
+                  d3.select("#bldgSelection").html("Construction (Enf)");
+    }
+
+function setCranes() {
+      BuildingsLayer.update(CranesSource, CranesViz);
+                  d3.select("#bldgSelection").html("Cranes");
+    }
+
+function setElectricalDev() {
+      BuildingsLayer.update(ElectricalDevSource, ElectricalDevViz);
+                  d3.select("#bldgSelection").html("Electrical (Dev)");
+    }
+
+function setElectricalEnf() {
+      BuildingsLayer.update(ElectricalEnfSource, ElectricalEnfViz);
+                  d3.select("#bldgSelection").html("Electrical (Enf)");
+    }
+
+function setElevators() {
+      BuildingsLayer.update(ElevatorsSource, ElevatorsViz);
+                  d3.select("#bldgSelection").html("Elevators");
+    }
+
+function setERT() {
+      BuildingsLayer.update(ERTSource, ERTViz);
+                  d3.select("#bldgSelection").html("Emergency Response");
+    }
+
+function setFacades() {
+      BuildingsLayer.update(FacadesSource, FacadesViz);
+                  d3.select("#bldgSelection").html("Facades");
+    }
+
+function setPlumbingDev() {
+      BuildingsLayer.update(PlumbingDevSource, PlumbingDevViz);
+                  d3.select("#bldgSelection").html("Plumbing (Dev)");
+    }
+
+function setPlumbingEnf() {
+      BuildingsLayer.update(PlumbingEnfSource, PlumbingEnfViz);
+                  d3.select("#bldgSelection").html("Plumbing (Enf)");
+    }
+
+function setQOL() {
+      BuildingsLayer.update(QOLSource, QOLViz);
+                  d3.select("#bldgSelection").html("Quality of Life");
+    }
+
+function setSustainability() {
+      BuildingsLayer.update(SustainabilitySource, SustainabilityViz);
+                  d3.select("#bldgSelection").html("Sustainability");
+    }
+
+function setMaterialFailure() {
+      BuildingsLayer.update(MaterialFailureSource, MaterialFailureViz);
+                  d3.select("#bldgSelection").html("Material Failure");
+    }
+
+function setMechanical() {
+      BuildingsLayer.update(MechanicalSource, MechanicalViz);
+                  d3.select("#bldgSelection").html("Mechanical Equipment");
+    }
+
+function setWorkerFell() {
+      BuildingsLayer.update(WorkerFellSource, WorkerFellViz);
+                  d3.select("#bldgSelection").html("Worker Fell");
+    }
+
+function setECB() {
+      BuildingsLayer.update(ECBSource, ECBViz);
+                  d3.select("#bldgSelection").html("ECB Violations");
+    }
+		
+function hideLoader() {
+      document.getElementById('loader').style.opacity = '0';
+    }
+
+
+    function updateNeighbourhood(event) {
+      let content = '';
+      for (let feature of event.features) {
+       content += `
+          <div class="container">
+				<div class="propInfo">
+								<h3 class="h3">${feature.variables.address.value}</h3>                                                                                            
+								<p class="open-sans"><h7>BOROUGH: ${feature.variables.borough.value}</h7></p>
+								<p class="open-sans"><h7>YEAR BUILT: ${feature.variables.cnstrc_.value}</h7></p>
+								<p class="open-sans"><h7>BIN PROFILE:</h7> <a href="${feature.variables.bis_prf.value}" target="_blank">${feature.variables.bin.value}</a></p> 
+				</div>   
+						 <p class="open-sans"><iframe src="${feature.variables.stretvw.value}"></iframe></p> 
+						 <header><h1>12-month building statistics</h1></header>
+						 
+						 <p class="open-sans" id="profileAttr">TOTAL PERMITS: <span class="boldval"> ${feature.variables.ttl_prm.value}</span><span style="font-size: 1.5em; color: Dodgerblue;" class="tooltip"><i class="fas fa-info-circle" id="infoicon"><span class="tooltiptext">Total active or inactive New Building, Alteration, and Demolotion permits issued in the past year in BIS, plus total DOB NOW permits by worktype</span></i></span></p>
+                         <p class="open-sans" id="profileAttr">TOTAL COMPLAINTS: <span class="boldval">${feature.variables.ttl_cmp.value}</span><span style="font-size: 1.5em; color: Dodgerblue;" class="tooltip"><i class="fas fa-info-circle" id="infoicon"><span class="tooltiptext">Total DOB complaints received in the past year, whether internally generated or referrals from 311 or another agency </span></i></span></p>            
+						 <p class="open-sans" id="profileAttr">TOTAL INSPECTIONS: <span class="boldval">${feature.variables.ttl_nsp.value}</span><span style="font-size: 1.5em; color: Dodgerblue;" class="tooltip"><i class="fas fa-info-circle" id="infoicon"><span class="tooltiptext">Total inspections in the past year conducted by a DOB inspector</span></i></span></p> 
+                         <p class="open-sans" id="profileAttr">TOTAL VIOLATIONS: <span class="boldval">${feature.variables.ttl_vlt.value}</span><span style="font-size: 1.5em; color: Dodgerblue;" class="tooltip"><i class="fas fa-info-circle" id="infoicon"><span class="tooltiptext">Total active or inactive violations issued in the past year. Includes both DOB and ECB violations.</span></i></span></p>  
+                         <p class="open-sans" id="profileAttr">CONSTRUCTION ACCIDENTS: <span class="boldval">${feature.variables.ttl_ccd.value}</span><span style="font-size: 1.5em; color: Dodgerblue;" class="tooltip"><i class="fas fa-info-circle" id="infoicon"><span class="tooltiptext">Total construction-related accidents in the past year in which an injury or fatality occurred</span></i></span></p>
+                                                                                              
+          </div>
+        `;
+      }
+      document.getElementById('content').innerHTML = content;
+    }
+	
+    function hideLoader() {
+      document.getElementById('loader').style.opacity = '0';
+    }
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+  </script>
+</body>
+</html>
